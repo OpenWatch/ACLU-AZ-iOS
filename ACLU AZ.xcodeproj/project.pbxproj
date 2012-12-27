@@ -16,6 +16,9 @@
 		D903ADC8168CD3F2003D8A23 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D903ADC7168CD3F2003D8A23 /* Default.png */; };
 		D903ADCA168CD3F2003D8A23 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D903ADC9168CD3F2003D8A23 /* Default@2x.png */; };
 		D903ADCC168CD3F2003D8A23 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D903ADCB168CD3F2003D8A23 /* Default-568h@2x.png */; };
+		D903ADD4168CD4CB003D8A23 /* OWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D903ADD3168CD4CB003D8A23 /* OWHomeViewController.m */; };
+		D903ADD8168CD79D003D8A23 /* 1070.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D903ADD6168CD79D003D8A23 /* 1070.jpg */; };
+		D903ADD9168CD79D003D8A23 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D903ADD7168CD79D003D8A23 /* logo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,10 @@
 		D903ADC7168CD3F2003D8A23 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D903ADC9168CD3F2003D8A23 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D903ADCB168CD3F2003D8A23 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D903ADD2168CD4CB003D8A23 /* OWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWHomeViewController.h; sourceTree = "<group>"; };
+		D903ADD3168CD4CB003D8A23 /* OWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWHomeViewController.m; sourceTree = "<group>"; };
+		D903ADD6168CD79D003D8A23 /* 1070.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1070.jpg; sourceTree = "<group>"; };
+		D903ADD7168CD79D003D8A23 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 		D903ADA6168CD3F2003D8A23 = {
 			isa = PBXGroup;
 			children = (
+				D903ADD5168CD79D003D8A23 /* Media */,
 				D903ADBB168CD3F2003D8A23 /* ACLU AZ */,
 				D903ADB4168CD3F2003D8A23 /* Frameworks */,
 				D903ADB2168CD3F2003D8A23 /* Products */,
@@ -80,6 +88,8 @@
 			children = (
 				D903ADC4168CD3F2003D8A23 /* OWAppDelegate.h */,
 				D903ADC5168CD3F2003D8A23 /* OWAppDelegate.m */,
+				D903ADD2168CD4CB003D8A23 /* OWHomeViewController.h */,
+				D903ADD3168CD4CB003D8A23 /* OWHomeViewController.m */,
 				D903ADBC168CD3F2003D8A23 /* Supporting Files */,
 			);
 			path = "ACLU AZ";
@@ -97,6 +107,15 @@
 				D903ADCB168CD3F2003D8A23 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D903ADD5168CD79D003D8A23 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				D903ADD6168CD79D003D8A23 /* 1070.jpg */,
+				D903ADD7168CD79D003D8A23 /* logo.jpg */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +174,8 @@
 				D903ADC8168CD3F2003D8A23 /* Default.png in Resources */,
 				D903ADCA168CD3F2003D8A23 /* Default@2x.png in Resources */,
 				D903ADCC168CD3F2003D8A23 /* Default-568h@2x.png in Resources */,
+				D903ADD8168CD79D003D8A23 /* 1070.jpg in Resources */,
+				D903ADD9168CD79D003D8A23 /* logo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +188,7 @@
 			files = (
 				D903ADC2168CD3F2003D8A23 /* main.m in Sources */,
 				D903ADC6168CD3F2003D8A23 /* OWAppDelegate.m in Sources */,
+				D903ADD4168CD4CB003D8A23 /* OWHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +264,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACLU AZ/ACLU AZ-Prefix.pch";
 				INFOPLIST_FILE = "ACLU AZ/ACLU AZ-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -253,6 +276,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACLU AZ/ACLU AZ-Prefix.pch";
 				INFOPLIST_FILE = "ACLU AZ/ACLU AZ-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
