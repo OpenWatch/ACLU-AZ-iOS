@@ -1,0 +1,3 @@
+[submodule "Submodules/OpenWatch-iOS"]
+	path = Submodules/OpenWatch-iOS
+	url = git@github.com:OpenWatch/OpenWatch-iOS.git
