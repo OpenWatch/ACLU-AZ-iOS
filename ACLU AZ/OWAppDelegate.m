@@ -3,10 +3,11 @@
 //  ACLU AZ
 //
 //  Created by Christopher Ballinger on 12/27/12.
-//  Copyright (c) 2012 OpenWatch. All rights reserved.
+//  Copyright (c) 2012 OpenWatch FPC. All rights reserved.
 //
 
 #import "OWAppDelegate.h"
+#import "OWACLUAZHomeViewController.h"
 
 @implementation OWAppDelegate
 
@@ -15,6 +16,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[OWACLUAZHomeViewController alloc] init];
     [self.window makeKeyAndVisible];
     return YES;
 }
