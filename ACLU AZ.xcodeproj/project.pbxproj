@@ -25,9 +25,39 @@
 		D903ADEA168CDCD6003D8A23 /* WETouchableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D903ADE6168CDCD6003D8A23 /* WETouchableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D903ADEF168CDD47003D8A23 /* about_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D903ADED168CDD47003D8A23 /* about_icon.png */; };
 		D903ADF0168CDD47003D8A23 /* about_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D903ADEE168CDD47003D8A23 /* about_icon@2x.png */; };
+		D90696491694BDCF006FEA8C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90696481694BDCF006FEA8C /* CoreLocation.framework */; };
+		D906964B1694BDD4006FEA8C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D906964A1694BDD4006FEA8C /* MapKit.framework */; };
+		D906964C1694BDD6006FEA8C /* libQuickDialog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D90696441694BDBF006FEA8C /* libQuickDialog.a */; };
+		D906964F1694C074006FEA8C /* OWUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D906964E1694C074006FEA8C /* OWUserInfoViewController.m */; };
+		D90696661694CE0C006FEA8C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D90696631694CE0C006FEA8C /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D906966A1694CED1006FEA8C /* OWACLUAZUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D90696691694CED1006FEA8C /* OWACLUAZUtilities.m */; };
 		D9F6B9B1168CDDE10095D4FA /* OWACLUAZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */; };
 		D9F6B9B6168CE0B00095D4FA /* OWReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B9B5168CE0B00095D4FA /* OWReportViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D90696411694BDBF006FEA8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90696381694BDBF006FEA8C /* QuickDialog.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D80B0E3313E052DF00FA85CA;
+			remoteInfo = QuickDialogExample;
+		};
+		D90696431694BDBF006FEA8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90696381694BDBF006FEA8C /* QuickDialog.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2C542393145ADEBD0026A152;
+			remoteInfo = QuickDialog;
+		};
+		D90696461694BDC7006FEA8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90696381694BDBF006FEA8C /* QuickDialog.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C542392145ADEBD0026A152;
+			remoteInfo = QuickDialog;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D903ADB1168CD3F2003D8A23 /* ACLU AZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ACLU AZ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +89,15 @@
 		D903ADE6168CDCD6003D8A23 /* WETouchableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WETouchableView.m; sourceTree = "<group>"; };
 		D903ADED168CDD47003D8A23 /* about_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_icon.png; sourceTree = "<group>"; };
 		D903ADEE168CDD47003D8A23 /* about_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_icon@2x.png"; sourceTree = "<group>"; };
+		D90696381694BDBF006FEA8C /* QuickDialog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuickDialog.xcodeproj; path = Submodules/QuickDialog/QuickDialog.xcodeproj; sourceTree = "<group>"; };
+		D90696481694BDCF006FEA8C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D906964A1694BDD4006FEA8C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D906964D1694C074006FEA8C /* OWUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUserInfoViewController.h; sourceTree = "<group>"; };
+		D906964E1694C074006FEA8C /* OWUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUserInfoViewController.m; sourceTree = "<group>"; };
+		D90696621694CE0C006FEA8C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		D90696631694CE0C006FEA8C /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		D90696681694CED1006FEA8C /* OWACLUAZUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWACLUAZUtilities.h; sourceTree = "<group>"; };
+		D90696691694CED1006FEA8C /* OWACLUAZUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWACLUAZUtilities.m; sourceTree = "<group>"; };
 		D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWACLUAZHomeViewController.m; sourceTree = "<group>"; };
 		D9F6B9B3168CDEE00095D4FA /* OWACLUAZStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWACLUAZStrings.h; sourceTree = "<group>"; };
 		D9F6B9B4168CE0B00095D4FA /* OWReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWReportViewController.h; sourceTree = "<group>"; };
@@ -70,6 +109,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D906964C1694BDD6006FEA8C /* libQuickDialog.a in Frameworks */,
+				D906964B1694BDD4006FEA8C /* MapKit.framework in Frameworks */,
+				D90696491694BDCF006FEA8C /* CoreLocation.framework in Frameworks */,
 				D903ADB6168CD3F2003D8A23 /* UIKit.framework in Frameworks */,
 				D903ADB8168CD3F2003D8A23 /* Foundation.framework in Frameworks */,
 				D903ADBA168CD3F2003D8A23 /* CoreGraphics.framework in Frameworks */,
@@ -82,9 +124,9 @@
 		D903ADA6168CD3F2003D8A23 = {
 			isa = PBXGroup;
 			children = (
-				D903ADEB168CDCDD003D8A23 /* Submodules */,
 				D903ADD5168CD79D003D8A23 /* Media */,
 				D903ADBB168CD3F2003D8A23 /* ACLU AZ */,
+				D903ADEB168CDCDD003D8A23 /* Submodules */,
 				D903ADB4168CD3F2003D8A23 /* Frameworks */,
 				D903ADB2168CD3F2003D8A23 /* Products */,
 			);
@@ -101,6 +143,8 @@
 		D903ADB4168CD3F2003D8A23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D906964A1694BDD4006FEA8C /* MapKit.framework */,
+				D90696481694BDCF006FEA8C /* CoreLocation.framework */,
 				D903ADB5168CD3F2003D8A23 /* UIKit.framework */,
 				D903ADB7168CD3F2003D8A23 /* Foundation.framework */,
 				D903ADB9168CD3F2003D8A23 /* CoreGraphics.framework */,
@@ -112,10 +156,14 @@
 			isa = PBXGroup;
 			children = (
 				D903ADC4168CD3F2003D8A23 /* OWAppDelegate.h */,
-				D9F6B9B3168CDEE00095D4FA /* OWACLUAZStrings.h */,
 				D903ADC5168CD3F2003D8A23 /* OWAppDelegate.m */,
+				D9F6B9B3168CDEE00095D4FA /* OWACLUAZStrings.h */,
+				D90696681694CED1006FEA8C /* OWACLUAZUtilities.h */,
+				D90696691694CED1006FEA8C /* OWACLUAZUtilities.m */,
 				D903ADD2168CD4CB003D8A23 /* OWACLUAZHomeViewController.h */,
 				D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */,
+				D906964D1694C074006FEA8C /* OWUserInfoViewController.h */,
+				D906964E1694C074006FEA8C /* OWUserInfoViewController.m */,
 				D9F6B9B4168CE0B00095D4FA /* OWReportViewController.h */,
 				D9F6B9B5168CE0B00095D4FA /* OWReportViewController.m */,
 				D903ADBC168CD3F2003D8A23 /* Supporting Files */,
@@ -168,6 +216,8 @@
 		D903ADEB168CDCDD003D8A23 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				D90696601694CE0C006FEA8C /* JSONKit */,
+				D90696381694BDBF006FEA8C /* QuickDialog.xcodeproj */,
 				D903ADEC168CDCE7003D8A23 /* OpenWatch */,
 				D903ADDD168CDCD6003D8A23 /* WEPopover */,
 			);
@@ -181,6 +231,25 @@
 				D903ADDB168CDC16003D8A23 /* OWUtilities.m */,
 			);
 			name = OpenWatch;
+			sourceTree = "<group>";
+		};
+		D90696391694BDBF006FEA8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D90696421694BDBF006FEA8C /* QuickDialogExample.app */,
+				D90696441694BDBF006FEA8C /* libQuickDialog.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D90696601694CE0C006FEA8C /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				D90696621694CE0C006FEA8C /* JSONKit.h */,
+				D90696631694CE0C006FEA8C /* JSONKit.m */,
+			);
+			name = JSONKit;
+			path = "Submodules/OpenWatch-iOS/Submodules/JSONKit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +266,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D90696471694BDC7006FEA8C /* PBXTargetDependency */,
 			);
 			name = "ACLU AZ";
 			productName = "ACLU AZ";
@@ -223,12 +293,35 @@
 			mainGroup = D903ADA6168CD3F2003D8A23;
 			productRefGroup = D903ADB2168CD3F2003D8A23 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D90696391694BDBF006FEA8C /* Products */;
+					ProjectRef = D90696381694BDBF006FEA8C /* QuickDialog.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D903ADB0168CD3F2003D8A23 /* ACLU AZ */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D90696421694BDBF006FEA8C /* QuickDialogExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = QuickDialogExample.app;
+			remoteRef = D90696411694BDBF006FEA8C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D90696441694BDBF006FEA8C /* libQuickDialog.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libQuickDialog.a;
+			remoteRef = D90696431694BDBF006FEA8C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D903ADAF168CD3F2003D8A23 /* Resources */ = {
@@ -262,10 +355,21 @@
 				D903ADEA168CDCD6003D8A23 /* WETouchableView.m in Sources */,
 				D9F6B9B1168CDDE10095D4FA /* OWACLUAZHomeViewController.m in Sources */,
 				D9F6B9B6168CE0B00095D4FA /* OWReportViewController.m in Sources */,
+				D906964F1694C074006FEA8C /* OWUserInfoViewController.m in Sources */,
+				D90696661694CE0C006FEA8C /* JSONKit.m in Sources */,
+				D906966A1694CED1006FEA8C /* OWACLUAZUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D90696471694BDC7006FEA8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QuickDialog;
+			targetProxy = D90696461694BDC7006FEA8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D903ADBE168CD3F2003D8A23 /* InfoPlist.strings */ = {
@@ -334,12 +438,13 @@
 		D903ADD0168CD3F2003D8A23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACLU AZ/ACLU AZ-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Submodules/**";
 				INFOPLIST_FILE = "ACLU AZ/ACLU AZ-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Submodules\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -347,12 +452,13 @@
 		D903ADD1168CD3F2003D8A23 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACLU AZ/ACLU AZ-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Submodules/**";
 				INFOPLIST_FILE = "ACLU AZ/ACLU AZ-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Submodules\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

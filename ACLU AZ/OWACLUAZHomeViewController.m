@@ -9,6 +9,7 @@
 #import "OWACLUAZHomeViewController.h"
 #import "OWUtilities.h"
 #import "OWACLUAZStrings.h"
+#import "OWUserInfoViewController.h"
 
 @interface OWACLUAZHomeViewController ()
 
@@ -30,6 +31,8 @@
         [self.view addSubview:reportButton];
         [self.view addSubview:infoButton];
         [self.view addSubview:rightsButton];
+        
+        [self.reportButton addTarget:self action:@selector(reportButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
 }
@@ -64,6 +67,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) reportButtonPressed:(id)sender {
+    QRootElement *userInfoRoot = [OWUserInfoViewController create];
+        
+    OWUserInfoViewController *userInfoController = (OWUserInfoViewController*)[QuickDialogController controllerForRoot:userInfoRoot];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:userInfoController];
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 @end
