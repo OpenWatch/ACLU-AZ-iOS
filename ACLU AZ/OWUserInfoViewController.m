@@ -10,18 +10,9 @@
 #import "OWACLUAZStrings.h"
 #import "JSONKit.h"
 #import "OWACLUAZUtilities.h"
+#import "OWUserInfoController.h"
 
-#define USER_INFO_FILENAME @"userinfo.json"
-#define LAST_NAME_KEY @"last_name"
-#define FIRST_NAME_KEY @"first_name"
-#define ADDRESS_1_KEY @"address_1"
-#define ADDRESS_2_KEY @"address_2"
-#define CITY_KEY @"city"
-#define STATE_KEY @"state"
-#define ZIP_KEY @"zip"
-#define EMAIL_KEY @"email"
-#define PHONE_KEY @"phone"
-#define ALTERNATE_KEY @"alternate"
+
 
 @interface OWUserInfoViewController ()
 
@@ -43,8 +34,11 @@
 - (void) saveButtonPressed:(id)sender {
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
     [self.root fetchValueIntoObject:data];
-    if ([self validateData:data]) {
-        [self saveData:data toPath:[self userInfoPath]];
+    
+    OWUserInfoController *userInfoController = [OWUserInfoController sharedInstance];
+    userInfoController.data = data;
+    
+    if ([userInfoController isValid]) {
         [self dismissViewControllerAnimated:YES completion:nil];
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:ERROR_STRING message:REQUIRED_VALUES_MSG_STRING delegate:nil cancelButtonTitle:OK_STRING otherButtonTitles: nil];
@@ -54,48 +48,10 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self loadSavedDataFromPath:[self userInfoPath]];
-}
-
-- (BOOL) validateData:(NSDictionary*)data {
-    NSString *firstName = [data objectForKey:FIRST_NAME_KEY];
-    NSString *lastName = [data objectForKey:LAST_NAME_KEY];
-    return (firstName.length > 0 && lastName.length > 0);
-}
-
-- (void) saveData:(NSDictionary*)data toPath:(NSString*)path {
-    NSLog(@"obj1: %@", [data description]);
-    
-    NSError *error = nil;
-    NSData *jsonData = [data JSONDataWithOptions:JKSerializeOptionPretty error:&error];
-    if (error) {
-        NSLog(@"Error serializing form data: %@%@", [error localizedDescription],[error userInfo]);
-        error = nil;
-    }
-    if (jsonData) {
-        [jsonData writeToFile:path options:NSDataWritingAtomic | NSDataWritingFileProtectionComplete error:&error];
-        if (error) {
-            NSLog(@"Error writing user info JSON to file %@%@", [error localizedDescription],[error userInfo]);
-        }
-    }
-}
-
-- (void) loadSavedDataFromPath:(NSString*)path {
-    NSError *error = nil;
-    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:path options:NSDataReadingUncached error:&error];
-    if (error) {
-        NSLog(@"Error reading user info JSON data: %@%@", [error localizedDescription],[error userInfo]);
-        error = nil;
-    }
-    if (jsonData) {
-        NSDictionary *data = [jsonData objectFromJSONDataWithParseOptions:JKParseOptionNone error:&error];
-        if (error) {
-            NSLog(@"Error parsing user info JSON: %@%@", [error localizedDescription], [error userInfo]);
-        }
-        if (data) {
-            [self.root bindToObject:data];
-            [self refreshValues];
-        }
+    OWUserInfoController *userInfoController = [OWUserInfoController sharedInstance];
+    if (userInfoController.data) {
+        [self.root bindToObject:userInfoController.data];
+        [self refreshValues];
     }
 }
 
@@ -103,9 +59,6 @@
     [self.quickDialogTableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 1)] withRowAnimation:UITableViewRowAnimationFade];
 }
 
-- (NSString*) userInfoPath {
-    return [[OWACLUAZUtilities applicationDocumentsDirectory] stringByAppendingPathComponent:USER_INFO_FILENAME];
-}
 
 + (QRootElement *)create {
     QRootElement *root = [[QRootElement alloc] init];

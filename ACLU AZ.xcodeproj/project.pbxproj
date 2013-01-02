@@ -33,6 +33,7 @@
 		D906966A1694CED1006FEA8C /* OWACLUAZUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D90696691694CED1006FEA8C /* OWACLUAZUtilities.m */; };
 		D9F6B9B1168CDDE10095D4FA /* OWACLUAZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */; };
 		D9F6B9B6168CE0B00095D4FA /* OWReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B9B5168CE0B00095D4FA /* OWReportViewController.m */; };
+		D9FBAE441694E55B00F70E2C /* OWUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBAE431694E55B00F70E2C /* OWUserInfoController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,8 @@
 		D9F6B9B3168CDEE00095D4FA /* OWACLUAZStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWACLUAZStrings.h; sourceTree = "<group>"; };
 		D9F6B9B4168CE0B00095D4FA /* OWReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWReportViewController.h; sourceTree = "<group>"; };
 		D9F6B9B5168CE0B00095D4FA /* OWReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWReportViewController.m; sourceTree = "<group>"; };
+		D9FBAE421694E55B00F70E2C /* OWUserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUserInfoController.h; sourceTree = "<group>"; };
+		D9FBAE431694E55B00F70E2C /* OWUserInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUserInfoController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 				D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */,
 				D906964D1694C074006FEA8C /* OWUserInfoViewController.h */,
 				D906964E1694C074006FEA8C /* OWUserInfoViewController.m */,
+				D9FBAE421694E55B00F70E2C /* OWUserInfoController.h */,
+				D9FBAE431694E55B00F70E2C /* OWUserInfoController.m */,
 				D9F6B9B4168CE0B00095D4FA /* OWReportViewController.h */,
 				D9F6B9B5168CE0B00095D4FA /* OWReportViewController.m */,
 				D903ADBC168CD3F2003D8A23 /* Supporting Files */,
@@ -358,6 +363,7 @@
 				D906964F1694C074006FEA8C /* OWUserInfoViewController.m in Sources */,
 				D90696661694CE0C006FEA8C /* JSONKit.m in Sources */,
 				D906966A1694CED1006FEA8C /* OWACLUAZUtilities.m in Sources */,
+				D9FBAE441694E55B00F70E2C /* OWUserInfoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
