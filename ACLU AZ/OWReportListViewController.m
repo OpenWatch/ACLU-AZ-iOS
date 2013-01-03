@@ -24,7 +24,6 @@
 {
     self = [super init];
     if (self) {
-        self.title = REPORTS_STRING;
     }
     return self;
 }
@@ -33,6 +32,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.title = REPORTS_STRING;
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,8 +74,8 @@
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    QRootElement *reportRoot = [OWReportViewController create];
     OWReport *report = [reports objectAtIndex:indexPath.row];
+    QRootElement *reportRoot = [OWReportViewController createWithReport:report];
     OWReportViewController *reportViewController = (OWReportViewController*)[QuickDialogController controllerForRoot:reportRoot];
     reportViewController.report = report;
     [self.navigationController pushViewController:reportViewController animated:YES];

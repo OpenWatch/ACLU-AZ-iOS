@@ -17,6 +17,6 @@
 @property (nonatomic, strong) OWReport *report;
 @property (nonatomic, strong) UIBarButtonItem *submitButton;
 
-+ (QRootElement *)create;
++ (QRootElement *)createWithReport:(OWReport*)report;
 
 @end

@@ -83,7 +83,7 @@
 - (void) reportButtonPressed:(id)sender {
     OWUserInfoController *infoController = [OWUserInfoController sharedInstance];
     if ([infoController isValid]) {
-        QRootElement *reportRoot = [OWReportViewController create];
+        QRootElement *reportRoot = [OWReportViewController createWithReport:nil];
         OWReportViewController *reportViewController = (OWReportViewController*)[QuickDialogController controllerForRoot:reportRoot];
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:reportViewController];
         [self presentViewController:navController animated:YES completion:nil];

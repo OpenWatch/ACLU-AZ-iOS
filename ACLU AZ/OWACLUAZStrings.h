@@ -39,3 +39,5 @@
 #define SUBMITTED_STRING NSLocalizedString(@"Submitted", @"Label for submitted reports")
 #define NOT_SUBMITTED_STRING NSLocalizedString(@"Not Submitted!", @"Label for unsubmitted reports")
 #define REPORTS_STRING NSLocalizedString(@"Reports", @"title for reports screen")
+#define VIEW_ON_MAP_STRING NSLocalizedString(@"View on Map", @"title for viewing stored location on map")
+#define UPDATE_STRING NSLocalizedString(@"Update", @"button title to update a report")

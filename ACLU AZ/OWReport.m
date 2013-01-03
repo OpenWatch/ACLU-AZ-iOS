@@ -84,7 +84,10 @@
 }
 
 - (CLLocation*) location {
-    return [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
+    if (self.latitude != 0.0f && self.longitude != 0.0f) {
+        return [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
+    }
+    return nil;
 }
 
 - (void) setLocation:(CLLocation *)location {

@@ -47,6 +47,9 @@
         NSDictionary *dict = [report dictionaryRepresentationForJSON:NO];
         [self.root bindToObject:dict];
         [self refreshValues];
+        if (report.isSubmitted) {
+            self.navigationItem.rightBarButtonItem.title = UPDATE_STRING;
+        }
     }
 }
 
@@ -92,7 +95,22 @@
 }
 
 
-+ (QRootElement *)create {
++ (QRootElement *)createWithReport:(OWReport*)report {
+    NSString *agency = nil;
+    NSDate *date = nil;
+    NSString *locationString = nil;
+    CLLocation *location = nil;
+    NSString *description = nil;
+    
+    if (report) {
+        agency = report.agency;
+        date = report.date;
+        locationString = report.locationString;
+        location = report.location;
+        description = report.incidentDescription;
+    }
+    
+    
     QRootElement *root = [[QRootElement alloc] init];
     root.title = REPORT_STRING;
     root.controllerName = NSStringFromClass([self class]);
@@ -100,28 +118,36 @@
 	QSection *agencySection = [[QSection alloc] initWithTitle:AGENCY_DESCRIPTION_STRING];
     agencySection.footer = AGENCY_PLACEHOLDER_STRING;
     
-    QEntryElement *agencyElement = [[QEntryElement alloc] initWithTitle:AGENCY_STRING Value:nil Placeholder:REQUIRED_STRING];
+    QEntryElement *agencyElement = [[QEntryElement alloc] initWithTitle:AGENCY_STRING Value:agency Placeholder:REQUIRED_STRING];
     agencyElement.key = AGENCY_KEY;
     [OWACLUAZUtilities setBindValueForElement:agencyElement];
     [agencySection addElement:agencyElement];
     
     QSection *dataSection = [[QSection alloc] init];
-    QDateTimeInlineElement *dateElement = [[QDateTimeInlineElement alloc] initWithTitle:INCIDENT_DATE_STRING date:[NSDate date]];
+    QDateTimeInlineElement *dateElement = [[QDateTimeInlineElement alloc] initWithTitle:INCIDENT_DATE_STRING date:date];
     dateElement.key = DATE_KEY;
     [OWACLUAZUtilities setBindValueForElement:dateElement];
-    QEntryElement *locationElement = [[QEntryElement alloc] initWithTitle:INCIDENT_LOCATION_STRING Value:nil Placeholder:REQUIRED_STRING];
+    QEntryElement *locationElement = [[QEntryElement alloc] initWithTitle:INCIDENT_LOCATION_STRING Value:locationString Placeholder:REQUIRED_STRING];
     locationElement.key = LOCATION_KEY;
     [OWACLUAZUtilities setBindValueForElement:locationElement];
     QBooleanElement *sendDeviceLocationElement = [[QBooleanElement alloc] initWithTitle:SEND_DEVICE_LOCATION_STRING BoolValue:YES];
     sendDeviceLocationElement.key = SEND_LOCATION_KEY;
     [OWACLUAZUtilities setBindValueForElement:sendDeviceLocationElement];
     
+    QMapElement *mapElement = nil;
+    if (location) {
+        mapElement = [[QMapElement alloc] initWithTitle:VIEW_ON_MAP_STRING coordinate:location.coordinate];
+    }
+    
     [dataSection addElement:dateElement];
     [dataSection addElement:locationElement];
+    if (mapElement) {
+        [dataSection addElement:mapElement];
+    }
     [dataSection addElement:sendDeviceLocationElement];
     
     QSection *descriptionSection = [[QSection alloc] initWithTitle:DESCRIPTION_SECTION_TITLE_STRING];
-    QMultilineElement *descriptionElement = [[QMultilineElement alloc] initWithTitle:DESCRIPTION_STRING value:nil];
+    QMultilineElement *descriptionElement = [[QMultilineElement alloc] initWithTitle:DESCRIPTION_STRING value:description];
     descriptionElement.key = INCIDENT_DESCRIPTION_KEY;
     [OWACLUAZUtilities setBindValueForElement:descriptionElement];
     [descriptionSection addElement:descriptionElement];
