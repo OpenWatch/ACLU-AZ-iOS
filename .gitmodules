@@ -3,4 +3,4 @@
 	url = git@github.com:OpenWatch/OpenWatch-iOS.git
 [submodule "Submodules/QuickDialog"]
 	path = Submodules/QuickDialog
-	url = git://github.com/escoz/QuickDialog.git
+	url = git@github.com:OpenWatch/QuickDialog.git

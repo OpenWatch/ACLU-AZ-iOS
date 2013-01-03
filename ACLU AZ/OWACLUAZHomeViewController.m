@@ -12,6 +12,7 @@
 #import "OWUserInfoViewController.h"
 #import "OWUserInfoController.h"
 #import "OWReportViewController.h"
+#import "OWReportListViewController.h"
 
 @interface OWACLUAZHomeViewController ()
 
@@ -35,6 +36,7 @@
         [self.view addSubview:rightsButton];
         
         [self.reportButton addTarget:self action:@selector(reportButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        [self.infoButton addTarget:self action:@selector(infoButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
 }
@@ -63,6 +65,13 @@
     [self.reportButton setTitle:REPORT_STRING forState:UIControlStateNormal];
     [self.rightsButton setTitle:KNOW_YOUR_RIGHTS_STRING forState:UIControlStateNormal];
     [self.infoButton setImage:infoImage forState:UIControlStateNormal];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,6 +93,11 @@
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:userInfoController];
         [self presentViewController:navController animated:YES completion:nil];
     }
+}
+
+- (void) infoButtonPressed:(id)sender {
+    OWReportListViewController *reportList = [[OWReportListViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:reportList animated:YES];
 }
 
 @end

@@ -64,6 +64,7 @@
 		D9FBAEA81694F13A00F70E2C /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBAE8B1694F13A00F70E2C /* MagicalRecord+ShorthandSupport.m */; };
 		D9FBAEA91694F13A00F70E2C /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBAE8D1694F13A00F70E2C /* MagicalRecord.m */; };
 		D9FBAEAB1694F21700F70E2C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FBAEAA1694F21700F70E2C /* CoreData.framework */; };
+		D9FBAED81695203A00F70E2C /* OWReportListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBAED71695203900F70E2C /* OWReportListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +196,8 @@
 		D9FBAE8E1694F13A00F70E2C /* MagicalRecordShorthand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalRecordShorthand.h; sourceTree = "<group>"; };
 		D9FBAE8F1694F13A00F70E2C /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
 		D9FBAEAA1694F21700F70E2C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D9FBAED61695203900F70E2C /* OWReportListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWReportListViewController.h; sourceTree = "<group>"; };
+		D9FBAED71695203900F70E2C /* OWReportListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWReportListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +269,8 @@
 				D9FBAE431694E55B00F70E2C /* OWUserInfoController.m */,
 				D9FBAE4E1694F03600F70E2C /* OWReportController.h */,
 				D9FBAE4F1694F03600F70E2C /* OWReportController.m */,
+				D9FBAED61695203900F70E2C /* OWReportListViewController.h */,
+				D9FBAED71695203900F70E2C /* OWReportListViewController.m */,
 				D9F6B9B4168CE0B00095D4FA /* OWReportViewController.h */,
 				D9F6B9B5168CE0B00095D4FA /* OWReportViewController.m */,
 				D903ADBC168CD3F2003D8A23 /* Supporting Files */,
@@ -593,6 +598,7 @@
 				D9FBAEA71694F13A00F70E2C /* MagicalRecord+Setup.m in Sources */,
 				D9FBAEA81694F13A00F70E2C /* MagicalRecord+ShorthandSupport.m in Sources */,
 				D9FBAEA91694F13A00F70E2C /* MagicalRecord.m in Sources */,
+				D9FBAED81695203A00F70E2C /* OWReportListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

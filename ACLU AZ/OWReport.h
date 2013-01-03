@@ -29,6 +29,6 @@
 @property (nonatomic) BOOL isSubmitted;
 
 - (void) loadValuesFromDictionary:(NSDictionary*)dictionary;
-- (NSDictionary*) dictionaryRepresentation;
+- (NSDictionary*) dictionaryRepresentationForJSON:(BOOL)forJSON;
 
 @end

@@ -31,6 +31,8 @@
         binding = @"boolValue";
     } else if ([element isKindOfClass:[QFloatElement class]]) {
         binding = @"floatValue";
+    } else if ([element isKindOfClass:[QDateTimeInlineElement class]] || [element isKindOfClass:[QDateTimeElement class]]) {
+        binding = @"dateValue";
     }
     NSString *bindValue = [NSString stringWithFormat:@"%@:%@",binding,key];
     element.bind = bindValue;

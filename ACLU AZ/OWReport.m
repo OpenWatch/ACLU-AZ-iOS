@@ -51,7 +51,7 @@
     }
 }
 
-- (NSDictionary*) dictionaryRepresentation {
+- (NSDictionary*) dictionaryRepresentationForJSON:(BOOL)forJSON {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
     if (self.agency) {
         [dictionary setObject:self.agency forKey:AGENCY_KEY];
@@ -60,8 +60,12 @@
         [dictionary setObject:self.incidentDescription forKey:INCIDENT_DESCRIPTION_KEY];
     }
     if (self.date) {
-        NSDateFormatter *dateFormatter = [OWUtilities utcDateFormatter];
-        [dictionary setObject:[dateFormatter stringFromDate:self.date] forKey:DATE_KEY];
+        if (forJSON) {
+            NSDateFormatter *dateFormatter = [OWUtilities utcDateFormatter];
+            [dictionary setObject:[dateFormatter stringFromDate:self.date] forKey:DATE_KEY];
+        } else {
+            [dictionary setObject:self.date forKey:DATE_KEY];
+        }
     }
     if (self.locationString) {
         [dictionary setObject:self.locationString forKey:LOCATION_KEY];
@@ -75,6 +79,7 @@
     if (self.uuid) {
         [dictionary setObject:self.uuid forKey:UUID_KEY];
     }
+    [dictionary setObject:@(YES) forKey:SEND_LOCATION_KEY];
     return dictionary;
 }
 

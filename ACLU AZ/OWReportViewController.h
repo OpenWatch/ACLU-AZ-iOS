@@ -15,6 +15,7 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLLocation *lastLocation;
 @property (nonatomic, strong) OWReport *report;
+@property (nonatomic, strong) UIBarButtonItem *submitButton;
 
 + (QRootElement *)create;
 

@@ -43,6 +43,10 @@
         self.locationManager.delegate = self;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         [locationManager startUpdatingLocation];
+    } else {
+        NSDictionary *dict = [report dictionaryRepresentationForJSON:NO];
+        [self.root bindToObject:dict];
+        [self refreshValues];
     }
 }
 
@@ -128,5 +132,10 @@
     [root addSection:descriptionSection];
     return root;
 }
+
+- (void) refreshValues {
+    [self.quickDialogTableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 3)] withRowAnimation:UITableViewRowAnimationFade];
+}
+
 
 @end
