@@ -7,7 +7,6 @@
 //
 
 #import "OWReport.h"
-#import "OWReportController.h"
 #import "OWUtilities.h"
 
 @interface OWReport()
@@ -93,6 +92,10 @@
 - (void) setLocation:(CLLocation *)location {
     self.latitude = location.coordinate.latitude;
     self.longitude = location.coordinate.longitude;
+}
+
+- (BOOL) validate {
+    return self.agency.length > 0 && self.locationString.length > 0 && self.incidentDescription.length > 0;
 }
 
 @end

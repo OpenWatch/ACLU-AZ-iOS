@@ -31,4 +31,6 @@
 - (void) loadValuesFromDictionary:(NSDictionary*)dictionary;
 - (NSDictionary*) dictionaryRepresentationForJSON:(BOOL)forJSON;
 
+- (BOOL) validate;
+
 @end

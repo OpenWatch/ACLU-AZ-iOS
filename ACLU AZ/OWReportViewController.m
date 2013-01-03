@@ -27,13 +27,15 @@
     return self;
 }
 
-- (void) startLocationUpdated:(CLLocation *)location {}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:SUBMIT_STRING style:UIBarButtonItemStyleDone target:self action:@selector(submitButtonPressed:)];
+}
+
+- (void) cancelButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -43,9 +45,11 @@
         self.locationManager.delegate = self;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         [locationManager startUpdatingLocation];
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:CANCEL_STRING style:UIBarButtonItemStyleBordered target:self action:@selector(cancelButtonPressed:)];
     } else {
         NSDictionary *dict = [report dictionaryRepresentationForJSON:NO];
         [self.root bindToObject:dict];
+        self.lastLocation = report.location;
         [self refreshValues];
         if (report.isSubmitted) {
             self.navigationItem.rightBarButtonItem.title = UPDATE_STRING;
@@ -76,6 +80,13 @@
     NSLog(@"report: %@", [report description]);
     NSManagedObjectContext *context = [NSManagedObjectContext MR_contextForCurrentThread];
     [context MR_saveNestedContexts];
+    
+    if ([report validate]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:ERROR_STRING message:REQUIRED_VALUES_MSG_STRING delegate:nil cancelButtonTitle:OK_STRING otherButtonTitles: nil];
+        [alert show];
+    }
 }
 
 - (void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
@@ -97,7 +108,7 @@
 
 + (QRootElement *)createWithReport:(OWReport*)report {
     NSString *agency = nil;
-    NSDate *date = nil;
+    NSDate *date = [NSDate date];
     NSString *locationString = nil;
     CLLocation *location = nil;
     NSString *description = nil;
@@ -147,6 +158,7 @@
     [dataSection addElement:sendDeviceLocationElement];
     
     QSection *descriptionSection = [[QSection alloc] initWithTitle:DESCRIPTION_SECTION_TITLE_STRING];
+    descriptionSection.footer = REQUIRED_STRING;
     QMultilineElement *descriptionElement = [[QMultilineElement alloc] initWithTitle:DESCRIPTION_STRING value:description];
     descriptionElement.key = INCIDENT_DESCRIPTION_KEY;
     [OWACLUAZUtilities setBindValueForElement:descriptionElement];

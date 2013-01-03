@@ -36,7 +36,6 @@
 		D9FBAE441694E55B00F70E2C /* OWUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBAE431694E55B00F70E2C /* OWUserInfoController.m */; };
 		D9FBAE471694EADC00F70E2C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9FBAE451694EADC00F70E2C /* Model.xcdatamodeld */; };
 		D9FBAE4D1694EC4800F70E2C /* OWReport.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBAE4C1694EC4700F70E2C /* OWReport.m */; };
-		D9FBAE501694F03600F70E2C /* OWReportController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBAE4F1694F03600F70E2C /* OWReportController.m */; };
 		D9FBAE901694F13A00F70E2C /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBAE581694F13A00F70E2C /* MagicalImportFunctions.m */; };
 		D9FBAE911694F13A00F70E2C /* NSAttributeDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBAE5A1694F13A00F70E2C /* NSAttributeDescription+MagicalDataImport.m */; };
 		D9FBAE921694F13A00F70E2C /* NSEntityDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBAE5C1694F13A00F70E2C /* NSEntityDescription+MagicalDataImport.m */; };
@@ -139,8 +138,6 @@
 		D9FBAE461694EADC00F70E2C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D9FBAE4B1694EC4700F70E2C /* OWReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWReport.h; sourceTree = "<group>"; };
 		D9FBAE4C1694EC4700F70E2C /* OWReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWReport.m; sourceTree = "<group>"; };
-		D9FBAE4E1694F03600F70E2C /* OWReportController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWReportController.h; sourceTree = "<group>"; };
-		D9FBAE4F1694F03600F70E2C /* OWReportController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWReportController.m; sourceTree = "<group>"; };
 		D9FBAE571694F13A00F70E2C /* MagicalImportFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalImportFunctions.h; sourceTree = "<group>"; };
 		D9FBAE581694F13A00F70E2C /* MagicalImportFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalImportFunctions.m; sourceTree = "<group>"; };
 		D9FBAE591694F13A00F70E2C /* NSAttributeDescription+MagicalDataImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributeDescription+MagicalDataImport.h"; sourceTree = "<group>"; };
@@ -267,8 +264,6 @@
 				D906964E1694C074006FEA8C /* OWUserInfoViewController.m */,
 				D9FBAE421694E55B00F70E2C /* OWUserInfoController.h */,
 				D9FBAE431694E55B00F70E2C /* OWUserInfoController.m */,
-				D9FBAE4E1694F03600F70E2C /* OWReportController.h */,
-				D9FBAE4F1694F03600F70E2C /* OWReportController.m */,
 				D9FBAED61695203900F70E2C /* OWReportListViewController.h */,
 				D9FBAED71695203900F70E2C /* OWReportListViewController.m */,
 				D9F6B9B4168CE0B00095D4FA /* OWReportViewController.h */,
@@ -571,7 +566,6 @@
 				D9FBAE441694E55B00F70E2C /* OWUserInfoController.m in Sources */,
 				D9FBAE471694EADC00F70E2C /* Model.xcdatamodeld in Sources */,
 				D9FBAE4D1694EC4800F70E2C /* OWReport.m in Sources */,
-				D9FBAE501694F03600F70E2C /* OWReportController.m in Sources */,
 				D9FBAE901694F13A00F70E2C /* MagicalImportFunctions.m in Sources */,
 				D9FBAE911694F13A00F70E2C /* NSAttributeDescription+MagicalDataImport.m in Sources */,
 				D9FBAE921694F13A00F70E2C /* NSEntityDescription+MagicalDataImport.m in Sources */,

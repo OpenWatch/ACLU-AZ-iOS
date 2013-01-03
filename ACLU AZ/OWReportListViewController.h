@@ -10,6 +10,6 @@
 
 @interface OWReportListViewController : UITableViewController
 
-@property (nonatomic, strong) NSArray *reports;
+@property (nonatomic, strong) NSMutableArray *reports;
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "OWReportListViewController.h"
-#import "OWReportController.h"
 #import "OWReport.h"
 #import "OWReportViewController.h"
 #import "OWUtilities.h"
@@ -43,8 +42,17 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.reports = [OWReport MR_findAll];
+    [self refreshReports];
     [self.tableView reloadData];
+}
+
+- (void) refreshReports {
+    self.reports = [NSMutableArray arrayWithArray:[OWReport MR_findAll]];
+    [reports sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        OWReport *report1 = (OWReport*)obj1;
+        OWReport *report2 = (OWReport*)obj2;
+        return [report2.date compare:report1.date];
+    }];
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -79,6 +87,36 @@
     OWReportViewController *reportViewController = (OWReportViewController*)[QuickDialogController controllerForRoot:reportRoot];
     reportViewController.report = report;
     [self.navigationController pushViewController:reportViewController animated:YES];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //OWLocalRecording *recording = [recordingsArray objectAtIndex:indexPath.row];
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NO;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        OWReport *report = [reports objectAtIndex:indexPath.row];
+        [report MR_deleteEntity];
+        NSManagedObjectContext *context = [NSManagedObjectContext MR_contextForCurrentThread];
+        [context MR_saveNestedContexts];
+        [reports removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 @end

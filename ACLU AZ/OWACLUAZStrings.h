@@ -41,3 +41,4 @@
 #define REPORTS_STRING NSLocalizedString(@"Reports", @"title for reports screen")
 #define VIEW_ON_MAP_STRING NSLocalizedString(@"View on Map", @"title for viewing stored location on map")
 #define UPDATE_STRING NSLocalizedString(@"Update", @"button title to update a report")
+#define CANCEL_STRING NSLocalizedString(@"Cancel", @"Button title to cancel")
