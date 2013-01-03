@@ -47,10 +47,7 @@
         [locationManager startUpdatingLocation];
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:CANCEL_STRING style:UIBarButtonItemStyleBordered target:self action:@selector(cancelButtonPressed:)];
     } else {
-        NSDictionary *dict = [report dictionaryRepresentationForJSON:NO];
-        [self.root bindToObject:dict];
         self.lastLocation = report.location;
-        [self refreshValues];
         if (report.isSubmitted) {
             self.navigationItem.rightBarButtonItem.title = UPDATE_STRING;
         }

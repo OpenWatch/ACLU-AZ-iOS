@@ -42,3 +42,5 @@
 #define VIEW_ON_MAP_STRING NSLocalizedString(@"View on Map", @"title for viewing stored location on map")
 #define UPDATE_STRING NSLocalizedString(@"Update", @"button title to update a report")
 #define CANCEL_STRING NSLocalizedString(@"Cancel", @"Button title to cancel")
+#define ACLU_AZ_STRING NSLocalizedString(@"ACLU AZ", @"Name of ACLU Arizona")
+#define STOP_SB1070_STRING NSLocalizedString(@"Stop SB1070", @"Title")

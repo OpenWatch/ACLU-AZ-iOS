@@ -13,13 +13,14 @@
 #import "OWUserInfoController.h"
 #import "OWReportViewController.h"
 #import "OWReportListViewController.h"
+#import "QuartzCore/CALayer.h"
 
 @interface OWACLUAZHomeViewController ()
 
 @end
 
 @implementation OWACLUAZHomeViewController
-@synthesize reportButton, bannerImageView, infoButton, rightsButton;
+@synthesize reportButton, bannerImageView, settingsButton, rightsButton;
 
 - (id)init
 {
@@ -27,16 +28,23 @@
     if (self) {
         self.bannerImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.jpg"]];
         self.bannerImageView.contentMode = UIViewContentModeScaleAspectFit;
+        bannerImageView.layer.shadowColor = [UIColor blackColor].CGColor;
+        bannerImageView.layer.shadowOffset = CGSizeMake(0, 1);
+        bannerImageView.layer.shadowOpacity = 1;
+        bannerImageView.layer.shadowRadius = 3.0;
+        bannerImageView.clipsToBounds = NO;
         self.reportButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        self.infoButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.settingsButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"14-gear.png"] style:UIBarButtonItemStylePlain target:self action:@selector(infoButtonPressed:)];
         self.rightsButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [self.view addSubview:bannerImageView];
         [self.view addSubview:reportButton];
-        [self.view addSubview:infoButton];
         [self.view addSubview:rightsButton];
         
         [self.reportButton addTarget:self action:@selector(reportButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-        [self.infoButton addTarget:self action:@selector(infoButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        self.navigationItem.rightBarButtonItem = settingsButton;
+        self.title = STOP_SB1070_STRING;
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"body_bg.png"]];
+
     }
     return self;
 }
@@ -57,21 +65,15 @@
     CGFloat height = self.view.frame.size.height;
     CGFloat padding = 10.0f;
     CGFloat buttonXOrigin = width/2-buttonWidth/2;
-    self.bannerImageView.frame = CGRectMake(padding, padding, width-padding*2, bannerHeight);
-    self.reportButton.frame = CGRectMake(buttonXOrigin, bannerHeight+padding*2, buttonWidth, buttonHeight);
+    self.bannerImageView.frame = CGRectMake(padding, padding*2+45, width-padding*2, bannerHeight);
+    self.reportButton.frame = CGRectMake(buttonXOrigin, [OWUtilities bottomOfView:bannerImageView]+padding*2, buttonWidth, buttonHeight);
     self.rightsButton.frame = CGRectMake(buttonXOrigin, [OWUtilities bottomOfView:reportButton]+padding*2, buttonWidth, buttonHeight);
-    UIImage *infoImage = [UIImage imageNamed:@"about_icon.png"];
-    self.infoButton.frame = CGRectMake(padding, height-infoImage.size.height-padding, infoImage.size.width, infoImage.size.height);
     [self.reportButton setTitle:REPORT_STRING forState:UIControlStateNormal];
     [self.rightsButton setTitle:KNOW_YOUR_RIGHTS_STRING forState:UIControlStateNormal];
-    [self.infoButton setImage:infoImage forState:UIControlStateNormal];
-    
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)didReceiveMemoryWarning
