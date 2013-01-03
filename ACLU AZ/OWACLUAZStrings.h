@@ -35,6 +35,7 @@
 #define INCIDENT_LOCATION_STRING NSLocalizedString(@"Incident Location", @"label for incident location")
 #define SEND_DEVICE_LOCATION_STRING NSLocalizedString(@"Send Device Location", @"Whether or not to send current device location")
 #define SUBMIT_STRING NSLocalizedString(@"Submit", @"Send the report button title")
+#define NEXT_STRING NSLocalizedString(@"Next", @"title for next button")
 
 #define SUBMITTED_STRING NSLocalizedString(@"Submitted", @"Label for submitted reports")
 #define NOT_SUBMITTED_STRING NSLocalizedString(@"Not Submitted!", @"Label for unsubmitted reports")

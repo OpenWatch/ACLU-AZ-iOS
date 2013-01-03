@@ -8,6 +8,7 @@
 
 #import "OWAppDelegate.h"
 #import "OWACLUAZHomeViewController.h"
+#import "OWACLUAZUtilities.h"
 
 @implementation OWAppDelegate
 
@@ -16,13 +17,14 @@
     [MagicalRecord setupCoreDataStack];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+
     self.window.backgroundColor = [UIColor whiteColor];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:[[OWACLUAZHomeViewController alloc] init]];
-    UIColor *lightBlueColor = [UIColor colorWithRed:0.16078431372549 green:0.20392156862745 blue:0.27450980392157 alpha:1.0f];
-    UIColor *darkBlueColor = [UIColor colorWithRed:0.11764705882353 green:0.16078431372549 blue:0.24705882352941 alpha:1.0f];
-    navController.navigationBar.tintColor = darkBlueColor;
-    navController.navigationBar.alpha = 0.9f;
-    navController.navigationBar.translucent = YES;
+
+    navController.navigationBar.tintColor = [OWACLUAZUtilities darkBlueColor];
+    //navController.navigationBar.alpha = 0.9f;
+    //navController.navigationBar.translucent = YES;
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;

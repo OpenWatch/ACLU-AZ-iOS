@@ -14,6 +14,7 @@
 #import "OWReportViewController.h"
 #import "OWReportListViewController.h"
 #import "QuartzCore/CALayer.h"
+#import "OWACLUAZUtilities.h"
 
 @interface OWACLUAZHomeViewController ()
 
@@ -34,8 +35,7 @@
 
         
         self.title = STOP_SB1070_STRING;
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"body_bg.png"]];
-
+        self.view.backgroundColor = [OWACLUAZUtilities backgroundPattern];
     }
     return self;
 }
@@ -126,7 +126,7 @@
     CGFloat height = self.view.frame.size.height;
     CGFloat padding = 10.0f;
 
-    self.bannerImageView.frame = CGRectMake(padding, padding*2+45, width-padding*2, bannerHeight);
+    self.bannerImageView.frame = CGRectMake(padding, padding*2, width-padding*2, bannerHeight);
     CGFloat buttonViewXOrigin = floorf(width/2-buttonView.frame.size.width/2);
     CGFloat buttonViewYOrigin = floorf([OWUtilities bottomOfView:bannerImageView] + ((height - [OWUtilities bottomOfView:bannerImageView]) / 2) - (buttonView.frame.size.height/2));
     self.buttonView.frame = CGRectMake(buttonViewXOrigin, buttonViewYOrigin, buttonView.frame.size.width, buttonView.frame.size.height);
@@ -144,18 +144,9 @@
 }
 
 - (void) reportButtonPressed:(id)sender {
-    OWUserInfoController *infoController = [OWUserInfoController sharedInstance];
-    if ([infoController isValid]) {
-        QRootElement *reportRoot = [OWReportViewController createWithReport:nil];
-        OWReportViewController *reportViewController = (OWReportViewController*)[QuickDialogController controllerForRoot:reportRoot];
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:reportViewController];
-        [self presentViewController:navController animated:YES completion:nil];
-    } else {
-        QRootElement *userInfoRoot = [OWUserInfoViewController create];
-        OWUserInfoViewController *userInfoController = (OWUserInfoViewController*)[QuickDialogController controllerForRoot:userInfoRoot];
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:userInfoController];
-        [self presentViewController:navController animated:YES completion:nil];
-    }
+    QRootElement *userInfoRoot = [OWUserInfoViewController create];
+    UIViewController *viewController = [QuickDialogController controllerForRoot:userInfoRoot];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void) infoButtonPressed:(id)sender {

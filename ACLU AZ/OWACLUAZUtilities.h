@@ -14,4 +14,8 @@
 + (void) setBindValueForElement:(QElement*)element; // key must be set
 + (NSString*) createUUID;
 
++ (UIColor*) lightBlueColor;
++ (UIColor*) darkBlueColor;
++ (UIColor*) backgroundPattern;
+
 @end

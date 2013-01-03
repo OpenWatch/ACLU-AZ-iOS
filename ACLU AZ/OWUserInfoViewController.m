@@ -11,7 +11,7 @@
 #import "JSONKit.h"
 #import "OWACLUAZUtilities.h"
 #import "OWUserInfoController.h"
-
+#import "OWReportViewController.h"
 
 
 @interface OWUserInfoViewController ()
@@ -22,8 +22,7 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:SAVE_STRING style:UIBarButtonItemStyleDone target:self action:@selector(saveButtonPressed:)];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:CLEAR_STRING style:UIBarButtonItemStyleBordered target:self action:@selector(clearButtonPressed:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NEXT_STRING style:UIBarButtonItemStyleBordered target:self action:@selector(nextButtonPressed:)];
 }
 
 - (void) clearButtonPressed:(id)sender {
@@ -31,7 +30,7 @@
     [self refreshValues];
 }
 
-- (void) saveButtonPressed:(id)sender {
+- (void) nextButtonPressed:(id)sender {
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
     [self.root fetchValueIntoObject:data];
     
@@ -39,7 +38,9 @@
     userInfoController.data = data;
     
     if ([userInfoController isValid]) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+        QRootElement *reportRoot = [OWReportViewController createWithReport:nil];
+        OWReportViewController *reportViewController = (OWReportViewController*)[QuickDialogController controllerForRoot:reportRoot];
+        [self.navigationController pushViewController:reportViewController animated:YES];
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:ERROR_STRING message:REQUIRED_VALUES_MSG_STRING delegate:nil cancelButtonTitle:OK_STRING otherButtonTitles: nil];
         [alert show];

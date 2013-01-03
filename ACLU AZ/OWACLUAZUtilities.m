@@ -46,4 +46,19 @@
     return (__bridge_transfer NSString *)string;
 }
 
++ (UIColor*) lightBlueColor {
+    UIColor *lightBlueColor = [UIColor colorWithRed:0.16078431372549 green:0.20392156862745 blue:0.27450980392157 alpha:1.0f];
+    return lightBlueColor;
+}
++ (UIColor*) darkBlueColor {
+    UIColor *darkBlueColor = [UIColor colorWithRed:0.11764705882353 green:0.16078431372549 blue:0.24705882352941 alpha:1.0f];
+    return darkBlueColor;
+}
++ (UIColor*) backgroundPattern {
+    return [UIColor colorWithPatternImage:[UIImage imageNamed:@"body_bg.png"]];
+}
+
+
+
+
 @end

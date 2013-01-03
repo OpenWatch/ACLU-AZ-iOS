@@ -38,6 +38,13 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    if (locationManager) {
+        [locationManager stopUpdatingLocation];
+    }
+}
+
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if (!report) {
@@ -45,7 +52,6 @@
         self.locationManager.delegate = self;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         [locationManager startUpdatingLocation];
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:CANCEL_STRING style:UIBarButtonItemStyleBordered target:self action:@selector(cancelButtonPressed:)];
     } else {
         self.lastLocation = report.location;
         if (report.isSubmitted) {
@@ -64,9 +70,7 @@
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
     [self.root fetchValueIntoObject:data];
     NSLog(@"data: %@", [data description]);
-    
-    [locationManager stopUpdatingLocation];
-    
+        
     if (!report) {
         report = [OWReport MR_createEntity];
         report.uuid = [OWACLUAZUtilities createUUID];
@@ -79,7 +83,7 @@
     [context MR_saveNestedContexts];
     
     if ([report validate]) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self.navigationController popToRootViewControllerAnimated:YES];
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:ERROR_STRING message:REQUIRED_VALUES_MSG_STRING delegate:nil cancelButtonTitle:OK_STRING otherButtonTitles: nil];
         [alert show];
