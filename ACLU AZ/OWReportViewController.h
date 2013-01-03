@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OWReport.h"
 
-@interface OWReportViewController : UIViewController
+@interface OWReportViewController : QuickDialogController
+
+@property (nonatomic, strong) OWReport *report;
+
++ (QRootElement *)create;
 
 @end

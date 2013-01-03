@@ -10,6 +10,8 @@
 #import "OWUtilities.h"
 #import "OWACLUAZStrings.h"
 #import "OWUserInfoViewController.h"
+#import "OWUserInfoController.h"
+#import "OWReportViewController.h"
 
 @interface OWACLUAZHomeViewController ()
 
@@ -70,11 +72,18 @@
 }
 
 - (void) reportButtonPressed:(id)sender {
-    QRootElement *userInfoRoot = [OWUserInfoViewController create];
-        
-    OWUserInfoViewController *userInfoController = (OWUserInfoViewController*)[QuickDialogController controllerForRoot:userInfoRoot];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:userInfoController];
-    [self presentViewController:navController animated:YES completion:nil];
+    OWUserInfoController *infoController = [OWUserInfoController sharedInstance];
+    if ([infoController isValid]) {
+        QRootElement *reportRoot = [OWReportViewController create];
+        OWReportViewController *reportViewController = (OWReportViewController*)[QuickDialogController controllerForRoot:reportRoot];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:reportViewController];
+        [self presentViewController:navController animated:YES completion:nil];
+    } else {
+        QRootElement *userInfoRoot = [OWUserInfoViewController create];
+        OWUserInfoViewController *userInfoController = (OWUserInfoViewController*)[QuickDialogController controllerForRoot:userInfoRoot];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:userInfoController];
+        [self presentViewController:navController animated:YES completion:nil];
+    }
 }
 
 @end
