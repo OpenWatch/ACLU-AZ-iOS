@@ -71,7 +71,7 @@
         if (error) {
             NSLog(@"Error parsing user info JSON: %@%@", [error localizedDescription], [error userInfo]);
         }
-        self.data = dataDict;
+        data = dataDict;
     }
 }
 

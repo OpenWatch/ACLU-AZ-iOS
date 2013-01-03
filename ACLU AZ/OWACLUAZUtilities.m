@@ -10,6 +10,7 @@
 
 @implementation OWACLUAZUtilities
 
+
 + (NSString *) applicationDocumentsDirectory
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -17,8 +18,30 @@
     return basePath;
 }
 
-+ (NSString*) textValueBindingForKey:(NSString*)key {
-    return [NSString stringWithFormat:@"textValue:%@", key];
++ (void) setBindValueForElement:(QElement*)element {
+    NSString *key = element.key;
+    if (!key) {
+        NSLog(@"Key is nil!");
+        return;
+    }
+    NSString *binding = @"value";
+    if ([element isKindOfClass:[QEntryElement class]]) {
+        binding = @"textValue";
+    } else if ([element isKindOfClass:[QBooleanElement class]]) {
+        binding = @"boolValue";
+    } else if ([element isKindOfClass:[QFloatElement class]]) {
+        binding = @"floatValue";
+    }
+    NSString *bindValue = [NSString stringWithFormat:@"%@:%@",binding,key];
+    element.bind = bindValue;
+}
+
++ (NSString *)createUUID
+{
+    CFUUIDRef theUUID = CFUUIDCreate(NULL);
+    CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+    CFRelease(theUUID);
+    return (__bridge_transfer NSString *)string;
 }
 
 @end

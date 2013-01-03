@@ -34,3 +34,4 @@
 #define DESCRIPTION_SECTION_TITLE_STRING NSLocalizedString(@"Please tell us about your experience with racial profiling, arrest or detention under SB 1070.", @"description for desc field")
 #define INCIDENT_LOCATION_STRING NSLocalizedString(@"Incident Location", @"label for incident location")
 #define SEND_DEVICE_LOCATION_STRING NSLocalizedString(@"Send Device Location", @"Whether or not to send current device location")
+#define SUBMIT_STRING NSLocalizedString(@"Submit", @"Send the report button title")

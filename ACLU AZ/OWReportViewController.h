@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "OWReport.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface OWReportViewController : QuickDialogController
+@interface OWReportViewController : QuickDialogController < CLLocationManagerDelegate>
 
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocation *lastLocation;
 @property (nonatomic, strong) OWReport *report;
 
 + (QRootElement *)create;

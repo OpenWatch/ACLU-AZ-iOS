@@ -71,33 +71,28 @@
     
     QEntryElement *firstNameElement = [[QEntryElement alloc] initWithTitle:FIRST_NAME_STRING Value:nil Placeholder:REQUIRED_STRING];
     firstNameElement.key = FIRST_NAME_KEY;
-    firstNameElement.bind = [OWACLUAZUtilities textValueBindingForKey:FIRST_NAME_KEY];
+    [OWACLUAZUtilities setBindValueForElement:firstNameElement];
     QEntryElement *lastNameElement = [[QEntryElement alloc] initWithTitle:LAST_NAME_STRING Value:nil Placeholder:REQUIRED_STRING];
     lastNameElement.key = LAST_NAME_KEY;
-    lastNameElement.bind = [OWACLUAZUtilities textValueBindingForKey:LAST_NAME_KEY];
-    
+    [OWACLUAZUtilities setBindValueForElement:lastNameElement];
     [nameSection addElement:firstNameElement];
     [nameSection addElement:lastNameElement];
     
     QEntryElement *address1Element = [[QEntryElement alloc] initWithTitle:[ADDRESS_STRING stringByAppendingString:@" 1"] Value:nil];
     address1Element.key = ADDRESS_1_KEY;
-    address1Element.bind = [OWACLUAZUtilities textValueBindingForKey:ADDRESS_1_KEY];
-    
+    [OWACLUAZUtilities setBindValueForElement:address1Element];
     QEntryElement *address2Element = [[QEntryElement alloc] initWithTitle:[ADDRESS_STRING stringByAppendingString:@" 2"] Value:nil];
     address2Element.key = ADDRESS_2_KEY;
-    address2Element.bind = [OWACLUAZUtilities textValueBindingForKey:ADDRESS_2_KEY];
-    
+    [OWACLUAZUtilities setBindValueForElement:address2Element];
     QEntryElement *cityElement = [[QEntryElement alloc] initWithTitle:CITY_STRING Value:nil];
     cityElement.key = CITY_KEY;
-    cityElement.bind = [OWACLUAZUtilities textValueBindingForKey:CITY_KEY];
-    
+    [OWACLUAZUtilities setBindValueForElement:cityElement];
     QEntryElement *stateElement = [[QEntryElement alloc] initWithTitle:STATE_STRING Value:nil];
     stateElement.key = STATE_KEY;
-    stateElement.bind = [OWACLUAZUtilities textValueBindingForKey:STATE_KEY];
-    
+    [OWACLUAZUtilities setBindValueForElement:stateElement];
     QEntryElement *zipElement = [[QEntryElement alloc] initWithTitle:ZIP_CODE_STRING Value:nil];
     zipElement.key = ZIP_KEY;
-    zipElement.bind = [OWACLUAZUtilities textValueBindingForKey:ZIP_KEY];
+    [OWACLUAZUtilities setBindValueForElement:zipElement];
     zipElement.keyboardType = UIKeyboardTypeNumberPad;
     
     [addressSection addElement:address1Element];
@@ -108,16 +103,15 @@
     
     QEntryElement *emailElement = [[QEntryElement alloc] initWithTitle:EMAIL_STRING Value:nil];
     emailElement.key = EMAIL_KEY;
-    emailElement.bind = [OWACLUAZUtilities textValueBindingForKey:EMAIL_KEY];
+    [OWACLUAZUtilities setBindValueForElement:emailElement];
     emailElement.keyboardType = UIKeyboardTypeEmailAddress;
     QEntryElement *phoneElement = [[QEntryElement alloc] initWithTitle:PHONE_STRING Value:nil];
     phoneElement.key = PHONE_KEY;
-    phoneElement.bind = [OWACLUAZUtilities textValueBindingForKey:PHONE_KEY];
+    [OWACLUAZUtilities setBindValueForElement:phoneElement];
     phoneElement.keyboardType = UIKeyboardTypeNumberPad;
     QEntryElement *alternateElement = [[QEntryElement alloc] initWithTitle:ALTERNATE_STRING Value:nil];
     alternateElement.key = ALTERNATE_KEY;
-    alternateElement.bind = [OWACLUAZUtilities textValueBindingForKey:ALTERNATE_KEY];
-    
+    [OWACLUAZUtilities setBindValueForElement:alternateElement];
     [otherSection addElement:emailElement];
     [otherSection addElement:phoneElement];
     [otherSection addElement:alternateElement];

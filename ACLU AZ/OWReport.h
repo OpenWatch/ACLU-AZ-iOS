@@ -15,15 +15,17 @@
 #define DATE_KEY @"date"
 #define AGENCY_KEY @"agency"
 #define INCIDENT_DESCRIPTION_KEY @"description"
+#define SEND_LOCATION_KEY @"send_location"
+#define UUID_KEY @"uuid"
 
 @interface OWReport : NSManagedObject
 
 @property (nonatomic, retain) NSString * locationString;
-@property (nonatomic) double latitude;
-@property (nonatomic) double longitude;
+@property (nonatomic, retain) CLLocation *location;
 @property (nonatomic, retain) NSDate *date;
 @property (nonatomic, retain) NSString * agency;
 @property (nonatomic, retain) NSString * incidentDescription;
+@property (nonatomic, retain) NSString * uuid;
 @property (nonatomic) BOOL isSubmitted;
 
 - (void) loadValuesFromDictionary:(NSDictionary*)dictionary;

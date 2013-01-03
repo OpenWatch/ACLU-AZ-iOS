@@ -8,7 +8,12 @@
 
 #import "OWReport.h"
 #import "OWReportController.h"
+#import "OWUtilities.h"
 
+@interface OWReport()
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
+@end
 
 @implementation OWReport
 
@@ -19,13 +24,33 @@
 @dynamic agency;
 @dynamic incidentDescription;
 @dynamic isSubmitted;
+@dynamic uuid;
 
 - (void) loadValuesFromDictionary:(NSDictionary*)dictionary {
     self.agency = [dictionary objectForKey:AGENCY_KEY];
     self.incidentDescription = [dictionary objectForKey:INCIDENT_DESCRIPTION_KEY];
-    self.date = [dictionary objectForKey:DATE_KEY];
+    NSObject *dateObject = [dictionary objectForKey:DATE_KEY];
+    if ([dateObject isKindOfClass:[NSDate class]]) {
+        self.date = (NSDate*)dateObject;
+    } else if ([dateObject isKindOfClass:[NSString class]]) {
+        NSDateFormatter *dateFormatter = [OWUtilities utcDateFormatter];
+        self.date = [dateFormatter dateFromString:(NSString*)dateObject];
+    }
     self.locationString = [dictionary objectForKey:LOCATION_KEY];
+    NSNumber *latitude = [dictionary objectForKey:LATITUDE_KEY];
+    if (latitude) {
+        self.latitude = [latitude doubleValue];
+    }
+    NSNumber *longitude = [dictionary objectForKey:LONGITUDE_KEY];
+    if (longitude) {
+        self.longitude = [longitude doubleValue];
+    }
+    NSString *uuid = [dictionary objectForKey:UUID_KEY];
+    if (uuid) {
+        self.uuid = uuid;
+    }
 }
+
 - (NSDictionary*) dictionaryRepresentation {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
     if (self.agency) {
@@ -35,7 +60,8 @@
         [dictionary setObject:self.incidentDescription forKey:INCIDENT_DESCRIPTION_KEY];
     }
     if (self.date) {
-        [dictionary setObject:self.date forKey:DATE_KEY];
+        NSDateFormatter *dateFormatter = [OWUtilities utcDateFormatter];
+        [dictionary setObject:[dateFormatter stringFromDate:self.date] forKey:DATE_KEY];
     }
     if (self.locationString) {
         [dictionary setObject:self.locationString forKey:LOCATION_KEY];
@@ -46,7 +72,19 @@
     if (self.longitude != 0.0f) {
         [dictionary setObject:@(self.longitude) forKey:LONGITUDE_KEY];
     }
+    if (self.uuid) {
+        [dictionary setObject:self.uuid forKey:UUID_KEY];
+    }
     return dictionary;
+}
+
+- (CLLocation*) location {
+    return [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
+}
+
+- (void) setLocation:(CLLocation *)location {
+    self.latitude = location.coordinate.latitude;
+    self.longitude = location.coordinate.longitude;
 }
 
 @end

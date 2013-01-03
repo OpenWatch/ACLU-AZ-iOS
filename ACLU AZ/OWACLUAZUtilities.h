@@ -11,6 +11,7 @@
 @interface OWACLUAZUtilities : NSObject
 
 + (NSString *) applicationDocumentsDirectory;
-+ (NSString*) textValueBindingForKey:(NSString*)key;
++ (void) setBindValueForElement:(QElement*)element; // key must be set
++ (NSString*) createUUID;
 
 @end
