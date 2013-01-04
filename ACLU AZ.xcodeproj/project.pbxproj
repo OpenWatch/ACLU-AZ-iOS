@@ -16,7 +16,6 @@
 		D903ADC8168CD3F2003D8A23 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D903ADC7168CD3F2003D8A23 /* Default.png */; };
 		D903ADCA168CD3F2003D8A23 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D903ADC9168CD3F2003D8A23 /* Default@2x.png */; };
 		D903ADCC168CD3F2003D8A23 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D903ADCB168CD3F2003D8A23 /* Default-568h@2x.png */; };
-		D903ADD8168CD79D003D8A23 /* 1070.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D903ADD6168CD79D003D8A23 /* 1070.jpg */; };
 		D903ADD9168CD79D003D8A23 /* aclu-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D903ADD7168CD79D003D8A23 /* aclu-logo.jpg */; };
 		D903ADDC168CDC16003D8A23 /* OWUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D903ADDB168CDC16003D8A23 /* OWUtilities.m */; };
 		D903ADE7168CDCD6003D8A23 /* UIBarButtonItem+WEPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = D903ADDF168CDCD6003D8A23 /* UIBarButtonItem+WEPopover.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -54,7 +53,6 @@
 		D94502DD16963759003BEF5E /* greenButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D94502C016963759003BEF5E /* greenButtonHighlight.png */; };
 		D94502DE16963759003BEF5E /* greenButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D94502C116963759003BEF5E /* greenButtonHighlight@2x.png */; };
 		D99826FB16977500008828A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D99826F916977500008828A9 /* Localizable.strings */; };
-		D99826FE1697750E008828A9 /* ACLU AZ-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D903ADBD168CD3F2003D8A23 /* ACLU AZ-Info.plist */; };
 		D9CA9CA516975B730068D336 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CA9CA016975B730068D336 /* libTestFlight.a */; };
 		D9CA9CD4169760080068D336 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CA9CD3169760080068D336 /* libz.dylib */; };
 		D9F6B9B1168CDDE10095D4FA /* OWACLUAZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */; };
@@ -131,7 +129,6 @@
 		D903ADC9168CD3F2003D8A23 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D903ADCB168CD3F2003D8A23 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D903ADD2168CD4CB003D8A23 /* OWACLUAZHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWACLUAZHomeViewController.h; sourceTree = "<group>"; };
-		D903ADD6168CD79D003D8A23 /* 1070.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1070.jpg; sourceTree = "<group>"; };
 		D903ADD7168CD79D003D8A23 /* aclu-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "aclu-logo.jpg"; sourceTree = "<group>"; };
 		D903ADDA168CDC16003D8A23 /* OWUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OWUtilities.h; path = "Submodules/OpenWatch-iOS/OpenWatch/OWUtilities.h"; sourceTree = SOURCE_ROOT; };
 		D903ADDB168CDC16003D8A23 /* OWUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OWUtilities.m; path = "Submodules/OpenWatch-iOS/OpenWatch/OWUtilities.m"; sourceTree = SOURCE_ROOT; };
@@ -165,8 +162,8 @@
 		D940DA4F169653D800DE6DDE /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		D940DA511696565500DE6DDE /* OWPreviewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWPreviewItem.h; sourceTree = "<group>"; };
 		D940DA521696565500DE6DDE /* OWPreviewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWPreviewItem.m; sourceTree = "<group>"; };
-		D940DA541696650E00DE6DDE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		D940DA561696651500DE6DDE /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		D940DA541696650E00DE6DDE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../logo.png; sourceTree = "<group>"; };
+		D940DA561696651500DE6DDE /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "../logo@2x.png"; sourceTree = "<group>"; };
 		D94502A916962BBD003BEF5E /* 14-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "14-gear.png"; sourceTree = "<group>"; };
 		D94502AA16962BBD003BEF5E /* 14-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "14-gear@2x.png"; sourceTree = "<group>"; };
 		D94502AD16962E5F003BEF5E /* body_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_bg.png; sourceTree = "<group>"; };
@@ -299,11 +296,6 @@
 		D903ADA6168CD3F2003D8A23 = {
 			isa = PBXGroup;
 			children = (
-				D9CA9CD3169760080068D336 /* libz.dylib */,
-				D940DA561696651500DE6DDE /* logo@2x.png */,
-				D940DA541696650E00DE6DDE /* logo.png */,
-				D940DA4F169653D800DE6DDE /* QuickLook.framework */,
-				D9FBAEAA1694F21700F70E2C /* CoreData.framework */,
 				D903ADD5168CD79D003D8A23 /* Media */,
 				D903ADBB168CD3F2003D8A23 /* ACLU AZ */,
 				D903ADEB168CDCDD003D8A23 /* Submodules */,
@@ -323,6 +315,9 @@
 		D903ADB4168CD3F2003D8A23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D9CA9CD3169760080068D336 /* libz.dylib */,
+				D940DA4F169653D800DE6DDE /* QuickLook.framework */,
+				D9FBAEAA1694F21700F70E2C /* CoreData.framework */,
 				D906964A1694BDD4006FEA8C /* MapKit.framework */,
 				D90696481694BDCF006FEA8C /* CoreLocation.framework */,
 				D903ADB5168CD3F2003D8A23 /* UIKit.framework */,
@@ -381,13 +376,14 @@
 		D903ADD5168CD79D003D8A23 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				D940DA561696651500DE6DDE /* logo@2x.png */,
+				D940DA541696650E00DE6DDE /* logo.png */,
 				D940DA421696524100DE6DDE /* PDFs */,
 				D94502B516963759003BEF5E /* buttons */,
 				D94502AD16962E5F003BEF5E /* body_bg.png */,
 				D94502AE16962E5F003BEF5E /* body_bg@2x.png */,
 				D94502A916962BBD003BEF5E /* 14-gear.png */,
 				D94502AA16962BBD003BEF5E /* 14-gear@2x.png */,
-				D903ADD6168CD79D003D8A23 /* 1070.jpg */,
 				D903ADD7168CD79D003D8A23 /* aclu-logo.jpg */,
 				D940DA3D1696408F00DE6DDE /* aclu-logo@2x.jpg */,
 			);
@@ -691,11 +687,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D903ADC0168CD3F2003D8A23 /* InfoPlist.strings in Resources */,
+				D99826FB16977500008828A9 /* Localizable.strings in Resources */,
 				D903ADC8168CD3F2003D8A23 /* Default.png in Resources */,
 				D903ADCA168CD3F2003D8A23 /* Default@2x.png in Resources */,
 				D903ADCC168CD3F2003D8A23 /* Default-568h@2x.png in Resources */,
-				D903ADD8168CD79D003D8A23 /* 1070.jpg in Resources */,
 				D903ADD9168CD79D003D8A23 /* aclu-logo.jpg in Resources */,
+				D940DA3E1696408F00DE6DDE /* aclu-logo@2x.jpg in Resources */,
 				D94502AB16962BBD003BEF5E /* 14-gear.png in Resources */,
 				D94502AC16962BBD003BEF5E /* 14-gear@2x.png in Resources */,
 				D94502AF16962E5F003BEF5E /* body_bg.png in Resources */,
@@ -708,7 +705,6 @@
 				D94502DC16963759003BEF5E /* greenButton@2x.png in Resources */,
 				D94502DD16963759003BEF5E /* greenButtonHighlight.png in Resources */,
 				D94502DE16963759003BEF5E /* greenButtonHighlight@2x.png in Resources */,
-				D940DA3E1696408F00DE6DDE /* aclu-logo@2x.jpg in Resources */,
 				D940DA491696524100DE6DDE /* bust-english.pdf in Resources */,
 				D940DA4A1696524100DE6DDE /* bust-spanish.pdf in Resources */,
 				D940DA4B1696524100DE6DDE /* info-english.pdf in Resources */,
@@ -717,8 +713,6 @@
 				D940DA4E1696524100DE6DDE /* kyr-spanish.pdf in Resources */,
 				D940DA551696650E00DE6DDE /* logo.png in Resources */,
 				D940DA571696651500DE6DDE /* logo@2x.png in Resources */,
-				D99826FB16977500008828A9 /* Localizable.strings in Resources */,
-				D99826FE1697750E008828A9 /* ACLU AZ-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
