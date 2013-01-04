@@ -42,7 +42,7 @@
 }
 
 - (void) setupBannerImage {
-    self.bannerImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.jpg"]];
+    self.bannerImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"aclu-logo.jpg"]];
     self.bannerImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self setShadowForView:bannerImageView];
     [self.view addSubview:bannerImageView];
