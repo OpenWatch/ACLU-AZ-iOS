@@ -16,13 +16,14 @@
 #import "QuartzCore/CALayer.h"
 #import "OWACLUAZUtilities.h"
 #import "OWRightsViewController.h"
+#import "OWAboutViewController.h"
 
 @interface OWACLUAZHomeViewController ()
 
 @end
 
 @implementation OWACLUAZHomeViewController
-@synthesize reportButton, bannerImageView, settingsButton, rightsButton, buttonView;
+@synthesize reportButton, bannerImageView, settingsButton, rightsButton, buttonView, aboutButton;
 
 - (id)init
 {
@@ -33,7 +34,9 @@
 
         self.settingsButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"14-gear.png"] style:UIBarButtonItemStylePlain target:self action:@selector(infoButtonPressed:)];
         self.navigationItem.rightBarButtonItem = settingsButton;
-
+        
+        self.aboutButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"about_icon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(aboutButtonPressed:)];
+        self.navigationItem.leftBarButtonItem = aboutButton;
         
         self.title = STOP_SB1070_STRING;
         self.view.backgroundColor = [OWACLUAZUtilities backgroundPattern];
@@ -161,6 +164,11 @@
 - (void) infoButtonPressed:(id)sender {
     OWReportListViewController *reportList = [[OWReportListViewController alloc] initWithStyle:UITableViewStylePlain];
     [self.navigationController pushViewController:reportList animated:YES];
+}
+
+- (void) aboutButtonPressed:(id)sender {
+    OWAboutViewController *aboutViewVC = [[OWAboutViewController alloc] init];
+    [self.navigationController pushViewController:aboutViewVC animated:YES];
 }
 
 @end

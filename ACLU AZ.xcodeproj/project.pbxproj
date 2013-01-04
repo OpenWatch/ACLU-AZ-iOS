@@ -53,6 +53,11 @@
 		D94502DD16963759003BEF5E /* greenButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D94502C016963759003BEF5E /* greenButtonHighlight.png */; };
 		D94502DE16963759003BEF5E /* greenButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D94502C116963759003BEF5E /* greenButtonHighlight@2x.png */; };
 		D99826FB16977500008828A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D99826F916977500008828A9 /* Localizable.strings */; };
+		D998272B16977FA5008828A9 /* OWAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D998272A16977FA5008828A9 /* OWAboutViewController.m */; };
+		D998272E1697820C008828A9 /* openwatch.png in Resources */ = {isa = PBXBuildFile; fileRef = D998272C1697820C008828A9 /* openwatch.png */; };
+		D998272F1697820C008828A9 /* openwatch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D998272D1697820C008828A9 /* openwatch@2x.png */; };
+		D998273216978516008828A9 /* about_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D998273016978516008828A9 /* about_icon.png */; };
+		D998273316978516008828A9 /* about_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D998273116978516008828A9 /* about_icon@2x.png */; };
 		D9CA9CA516975B730068D336 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CA9CA016975B730068D336 /* libTestFlight.a */; };
 		D9CA9CD4169760080068D336 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CA9CD3169760080068D336 /* libz.dylib */; };
 		D9F6B9B1168CDDE10095D4FA /* OWACLUAZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */; };
@@ -200,6 +205,12 @@
 		D99826FA16977500008828A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D99826FC1697750E008828A9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D99826FD1697750E008828A9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D998272916977FA5008828A9 /* OWAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWAboutViewController.h; sourceTree = "<group>"; };
+		D998272A16977FA5008828A9 /* OWAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWAboutViewController.m; sourceTree = "<group>"; };
+		D998272C1697820C008828A9 /* openwatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = openwatch.png; path = "Submodules/OpenWatch-iOS/Media/openwatch.png"; sourceTree = SOURCE_ROOT; };
+		D998272D1697820C008828A9 /* openwatch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "openwatch@2x.png"; path = "Submodules/OpenWatch-iOS/Media/openwatch@2x.png"; sourceTree = SOURCE_ROOT; };
+		D998273016978516008828A9 /* about_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_icon.png; sourceTree = "<group>"; };
+		D998273116978516008828A9 /* about_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_icon@2x.png"; sourceTree = "<group>"; };
 		D9CA9CA016975B730068D336 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		D9CA9CA316975B730068D336 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		D9CA9CA816975C2D0068D336 /* OWAPIKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWAPIKeys.h; sourceTree = "<group>"; };
@@ -341,6 +352,8 @@
 				D90696691694CED1006FEA8C /* OWACLUAZUtilities.m */,
 				D903ADD2168CD4CB003D8A23 /* OWACLUAZHomeViewController.h */,
 				D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */,
+				D998272916977FA5008828A9 /* OWAboutViewController.h */,
+				D998272A16977FA5008828A9 /* OWAboutViewController.m */,
 				D940DA511696565500DE6DDE /* OWPreviewItem.h */,
 				D940DA521696565500DE6DDE /* OWPreviewItem.m */,
 				D940DA3F169651C400DE6DDE /* OWRightsViewController.h */,
@@ -376,6 +389,10 @@
 		D903ADD5168CD79D003D8A23 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				D998273016978516008828A9 /* about_icon.png */,
+				D998273116978516008828A9 /* about_icon@2x.png */,
+				D998272C1697820C008828A9 /* openwatch.png */,
+				D998272D1697820C008828A9 /* openwatch@2x.png */,
 				D940DA561696651500DE6DDE /* logo@2x.png */,
 				D940DA541696650E00DE6DDE /* logo.png */,
 				D940DA421696524100DE6DDE /* PDFs */,
@@ -713,6 +730,10 @@
 				D940DA4E1696524100DE6DDE /* kyr-spanish.pdf in Resources */,
 				D940DA551696650E00DE6DDE /* logo.png in Resources */,
 				D940DA571696651500DE6DDE /* logo@2x.png in Resources */,
+				D998272E1697820C008828A9 /* openwatch.png in Resources */,
+				D998272F1697820C008828A9 /* openwatch@2x.png in Resources */,
+				D998273216978516008828A9 /* about_icon.png in Resources */,
+				D998273316978516008828A9 /* about_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,6 +788,7 @@
 				D9FBAED81695203A00F70E2C /* OWReportListViewController.m in Sources */,
 				D940DA41169651C400DE6DDE /* OWRightsViewController.m in Sources */,
 				D940DA531696565500DE6DDE /* OWPreviewItem.m in Sources */,
+				D998272B16977FA5008828A9 /* OWAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

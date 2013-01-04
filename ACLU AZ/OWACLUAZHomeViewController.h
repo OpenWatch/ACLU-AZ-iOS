@@ -13,6 +13,7 @@
 @property (nonatomic, strong) UIButton *reportButton;
 @property (nonatomic, strong) UIButton *rightsButton;
 @property (nonatomic, strong) UIBarButtonItem *settingsButton;
+@property (nonatomic, strong) UIBarButtonItem *aboutButton;
 @property (nonatomic, strong) UIImageView *bannerImageView;
 @property (nonatomic, strong) UIView *buttonView;
 
