@@ -53,6 +53,8 @@
 		D94502DC16963759003BEF5E /* greenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D94502BF16963759003BEF5E /* greenButton@2x.png */; };
 		D94502DD16963759003BEF5E /* greenButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D94502C016963759003BEF5E /* greenButtonHighlight.png */; };
 		D94502DE16963759003BEF5E /* greenButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D94502C116963759003BEF5E /* greenButtonHighlight@2x.png */; };
+		D99826FB16977500008828A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D99826F916977500008828A9 /* Localizable.strings */; };
+		D99826FE1697750E008828A9 /* ACLU AZ-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D903ADBD168CD3F2003D8A23 /* ACLU AZ-Info.plist */; };
 		D9CA9CA516975B730068D336 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CA9CA016975B730068D336 /* libTestFlight.a */; };
 		D9CA9CD4169760080068D336 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CA9CD3169760080068D336 /* libz.dylib */; };
 		D9F6B9B1168CDDE10095D4FA /* OWACLUAZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */; };
@@ -119,7 +121,7 @@
 		D903ADB5168CD3F2003D8A23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D903ADB7168CD3F2003D8A23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D903ADB9168CD3F2003D8A23 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D903ADBD168CD3F2003D8A23 /* ACLU AZ-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ACLU AZ-Info.plist"; sourceTree = "<group>"; };
+		D903ADBD168CD3F2003D8A23 /* ACLU AZ-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ACLU AZ-Info.plist"; sourceTree = "<group>"; };
 		D903ADBF168CD3F2003D8A23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D903ADC1168CD3F2003D8A23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D903ADC3168CD3F2003D8A23 /* ACLU AZ-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ACLU AZ-Prefix.pch"; sourceTree = "<group>"; };
@@ -198,6 +200,9 @@
 		D94502D016963759003BEF5E /* whiteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButton@2x.png"; sourceTree = "<group>"; };
 		D94502D116963759003BEF5E /* whiteButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButtonHighlight.png; sourceTree = "<group>"; };
 		D94502D216963759003BEF5E /* whiteButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		D99826FA16977500008828A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D99826FC1697750E008828A9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D99826FD1697750E008828A9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D9CA9CA016975B730068D336 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		D9CA9CA316975B730068D336 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		D9CA9CA816975C2D0068D336 /* OWAPIKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWAPIKeys.h; sourceTree = "<group>"; };
@@ -363,6 +368,7 @@
 			children = (
 				D903ADBD168CD3F2003D8A23 /* ACLU AZ-Info.plist */,
 				D903ADBE168CD3F2003D8A23 /* InfoPlist.strings */,
+				D99826F916977500008828A9 /* Localizable.strings */,
 				D903ADC1168CD3F2003D8A23 /* main.m */,
 				D903ADC3168CD3F2003D8A23 /* ACLU AZ-Prefix.pch */,
 				D903ADC7168CD3F2003D8A23 /* Default.png */,
@@ -644,6 +650,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 			);
 			mainGroup = D903ADA6168CD3F2003D8A23;
 			productRefGroup = D903ADB2168CD3F2003D8A23 /* Products */;
@@ -710,6 +717,8 @@
 				D940DA4E1696524100DE6DDE /* kyr-spanish.pdf in Resources */,
 				D940DA551696650E00DE6DDE /* logo.png in Resources */,
 				D940DA571696651500DE6DDE /* logo@2x.png in Resources */,
+				D99826FB16977500008828A9 /* Localizable.strings in Resources */,
+				D99826FE1697750E008828A9 /* ACLU AZ-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,8 +791,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				D903ADBF168CD3F2003D8A23 /* en */,
+				D99826FC1697750E008828A9 /* es */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D99826F916977500008828A9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D99826FA16977500008828A9 /* en */,
+				D99826FD1697750E008828A9 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

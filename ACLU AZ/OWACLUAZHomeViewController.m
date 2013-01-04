@@ -102,6 +102,8 @@
     [self.reportButton setTitle:REPORT_STRING forState:UIControlStateNormal];
     [self.rightsButton setTitle:KNOW_YOUR_RIGHTS_STRING forState:UIControlStateNormal];
     
+    self.rightsButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    
     [self styleTextForButton:reportButton];
     [self styleTextForButton:rightsButton];
 }

@@ -1,0 +1,3 @@
+/* Localized versions of Info.plist keys */
+
+NSLocationUsageDescription = "La información de ubicación se enviará a la ACLU de acuerdo con su política de privacidad.";

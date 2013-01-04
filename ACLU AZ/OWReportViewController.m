@@ -56,6 +56,9 @@
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        if ([locationManager respondsToSelector:@selector(purpose)]) {
+            locationManager.purpose = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationUsageDescription"];
+        }
         [locationManager startUpdatingLocation];
     } else {
         self.lastLocation = report.location;
