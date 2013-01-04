@@ -52,3 +52,6 @@ It's important to remember that everyone has basic rights — including the righ
 \n\
 We can fight SB 1070 by collecting examples of people who were stopped and detained by law enforcement because of their race and cases where the detention was extended in order to check immigration status. If you've experienced either, please tell us your story.", @"Informational message")
 #define ABOUT_STRING NSLocalizedString(@"About", @"Title for about page")
+#define INTERNET_CONNECTION_WARNING_STRING NSLocalizedString(@"Please check your internet connection and try again.", @"warning when a request fails")
+#define SUCCESS_STRING NSLocalizedString(@"Success", @"It's going great!")
+#define SUCCESS_MSG_STRING NSLocalizedString(@"Report was successfully submitted. Thank you!", @"Report success message")

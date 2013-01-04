@@ -11,6 +11,8 @@
 #import "OWReport.h"
 #import "OWACLUAZUtilities.h"
 #import "OWUserInfoController.h"
+#import "OWACLUClient.h"
+#import "AFHTTPRequestOperation.h"
 #import "JSONKit.h"
 
 #define REPORT_KEY @"report"
@@ -141,7 +143,7 @@
 	QSection *agencySection = [[QSection alloc] initWithTitle:AGENCY_DESCRIPTION_STRING];
     agencySection.footer = AGENCY_PLACEHOLDER_STRING;
     
-    QEntryElement *agencyElement = [[QEntryElement alloc] initWithTitle:AGENCY_STRING Value:agency];
+    QEntryElement *agencyElement = [[QEntryElement alloc] initWithTitle:AGENCY_STRING Value:agency Placeholder:nil];
     agencyElement.key = AGENCY_KEY;
     [OWACLUAZUtilities setBindValueForElement:agencyElement];
     [agencySection addElement:agencyElement];
@@ -193,14 +195,26 @@
         [reportDictionary setObject:[report dictionaryRepresentationForJSON:YES] forKey:REPORT_KEY];
         OWUserInfoController *userInfo = [OWUserInfoController sharedInstance];
         [reportDictionary setObject:userInfo.data forKey:USER_KEY];
-        NSError *error = nil;
-        NSString *jsonString = [reportDictionary JSONStringWithOptions:JKSerializeOptionPretty error:&error];
-        if (error) {
-            NSLog(@"Error serializing JSON");
-        }
-        NSLog(@"jsonData: %@", jsonString);
+        [self loading:YES];
+        self.submitButton.enabled = NO;
+        [[OWACLUClient sharedClient] postPath:@"submit/" parameters:reportDictionary success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSLog(@"response: %@", [responseObject description]);
+            [self loading:NO];
+            self.submitButton.enabled = YES;
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:SUCCESS_STRING message:SUCCESS_MSG_STRING delegate:nil cancelButtonTitle:OK_STRING otherButtonTitles: nil];
+            [alert show];
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            
+            NSLog(@"Error with API request: %@%@", [error localizedDescription], [error userInfo]);
+            NSLog(@"Error Response: %@", operation.responseString);
+            NSLog(@"Request: %@", [operation.request description]);
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:ERROR_STRING message:INTERNET_CONNECTION_WARNING_STRING delegate:nil cancelButtonTitle:OK_STRING otherButtonTitles: nil];
+            [alert show];
+            [self loading:NO];
+            self.submitButton.enabled = YES;
+        }];
         
-        [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }
 

@@ -58,7 +58,9 @@
     return [UIColor colorWithPatternImage:[UIImage imageNamed:@"body_bg.png"]];
 }
 
-
++ (NSString*) acluAPIURLString {
+    return @"http://192.168.1.38:8000/";
+}
 
 
 @end

@@ -18,4 +18,7 @@
 + (UIColor*) darkBlueColor;
 + (UIColor*) backgroundPattern;
 
++ (NSString*) acluAPIURLString;
+
+
 @end
