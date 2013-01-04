@@ -20,5 +20,6 @@
 
 + (NSString*) acluAPIURLString;
 
++ (void) setShadowForView:(UIView*)view;
 
 @end

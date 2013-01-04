@@ -55,3 +55,4 @@ We can fight SB 1070 by collecting examples of people who were stopped and detai
 #define INTERNET_CONNECTION_WARNING_STRING NSLocalizedString(@"Please check your internet connection and try again.", @"warning when a request fails")
 #define SUCCESS_STRING NSLocalizedString(@"Success", @"It's going great!")
 #define SUCCESS_MSG_STRING NSLocalizedString(@"Report was successfully submitted. Thank you!", @"Report success message")
+#define POWERED_BY_STRING NSLocalizedString(@"Powered by:", @"label for openwatch")

@@ -7,6 +7,7 @@
 //
 
 #import "OWACLUAZUtilities.h"
+#import "QuartzCore/CALayer.h"
 
 @implementation OWACLUAZUtilities
 
@@ -60,6 +61,14 @@
 
 + (NSString*) acluAPIURLString {
     return @"http://192.168.1.38:8000/";
+}
+
++ (void) setShadowForView:(UIView*)view {
+    view.layer.shadowColor = [UIColor blackColor].CGColor;
+    view.layer.shadowOffset = CGSizeMake(0, 1);
+    view.layer.shadowOpacity = 1;
+    view.layer.shadowRadius = 3.0;
+    view.clipsToBounds = NO;
 }
 
 

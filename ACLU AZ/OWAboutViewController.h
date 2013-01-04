@@ -10,8 +10,9 @@
 
 @interface OWAboutViewController : UIViewController
 
-@property (nonatomic, strong) UIImageView *acluImageView;
-@property (nonatomic, strong) UIImageView *openwatchImageView;
+@property (nonatomic, strong) UIButton *acluButton;
+@property (nonatomic, strong) UIButton *openwatchButton;
 @property (nonatomic, strong) UITextView *aboutTextView;
+@property (nonatomic, strong) UILabel *poweredByLabel;
 
 @end

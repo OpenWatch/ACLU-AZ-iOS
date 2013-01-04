@@ -13,7 +13,6 @@
 #import "OWUserInfoController.h"
 #import "OWReportViewController.h"
 #import "OWReportListViewController.h"
-#import "QuartzCore/CALayer.h"
 #import "OWACLUAZUtilities.h"
 #import "OWRightsViewController.h"
 #import "OWAboutViewController.h"
@@ -47,17 +46,9 @@
 - (void) setupBannerImage {
     self.bannerImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"aclu-logo.jpg"]];
     self.bannerImageView.contentMode = UIViewContentModeScaleAspectFit;
-    [self setShadowForView:bannerImageView];
+    [OWACLUAZUtilities setShadowForView:bannerImageView];
     [self.view addSubview:bannerImageView];
 
-}
-
-- (void) setShadowForView:(UIView*)view {
-    view.layer.shadowColor = [UIColor blackColor].CGColor;
-    view.layer.shadowOffset = CGSizeMake(0, 1);
-    view.layer.shadowOpacity = 1;
-    view.layer.shadowRadius = 3.0;
-    view.clipsToBounds = NO;
 }
 
 - (void) setupButtons {
@@ -77,8 +68,8 @@
     self.reportButton.frame = CGRectMake(0, 0, buttonWidth, buttonHeight);
     self.rightsButton.frame = CGRectMake(0, [OWUtilities bottomOfView:reportButton]+padding*2, buttonWidth, buttonHeight);
     
-    [self setShadowForView:reportButton];
-    [self setShadowForView:rightsButton];
+    [OWACLUAZUtilities setShadowForView:reportButton];
+    [OWACLUAZUtilities setShadowForView:rightsButton];
 
     [self.buttonView addSubview:reportButton];
     [self.buttonView addSubview:rightsButton];
