@@ -15,6 +15,7 @@
 #import "OWReportListViewController.h"
 #import "QuartzCore/CALayer.h"
 #import "OWACLUAZUtilities.h"
+#import "OWRightsViewController.h"
 
 @interface OWACLUAZHomeViewController ()
 
@@ -68,6 +69,7 @@
     self.reportButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.rightsButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.reportButton addTarget:self action:@selector(reportButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.rightsButton addTarget:self action:@selector(rightsButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     self.reportButton.frame = CGRectMake(0, 0, buttonWidth, buttonHeight);
     self.rightsButton.frame = CGRectMake(0, [OWUtilities bottomOfView:reportButton]+padding*2, buttonWidth, buttonHeight);
@@ -147,6 +149,11 @@
     QRootElement *userInfoRoot = [OWUserInfoViewController create];
     UIViewController *viewController = [QuickDialogController controllerForRoot:userInfoRoot];
     [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void) rightsButtonPressed:(id)sender {
+    OWRightsViewController *rightsVC = [[OWRightsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    [self.navigationController pushViewController:rightsVC animated:YES];
 }
 
 - (void) infoButtonPressed:(id)sender {

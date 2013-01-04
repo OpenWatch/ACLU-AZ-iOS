@@ -32,6 +32,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.title = REPORTS_STRING;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning

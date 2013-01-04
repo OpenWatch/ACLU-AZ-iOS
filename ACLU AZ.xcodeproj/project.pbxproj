@@ -30,6 +30,15 @@
 		D90696661694CE0C006FEA8C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D90696631694CE0C006FEA8C /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D906966A1694CED1006FEA8C /* OWACLUAZUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D90696691694CED1006FEA8C /* OWACLUAZUtilities.m */; };
 		D940DA3E1696408F00DE6DDE /* logo@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D940DA3D1696408F00DE6DDE /* logo@2x.jpg */; };
+		D940DA41169651C400DE6DDE /* OWRightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D940DA40169651C400DE6DDE /* OWRightsViewController.m */; };
+		D940DA491696524100DE6DDE /* bust-english.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D940DA431696524100DE6DDE /* bust-english.pdf */; };
+		D940DA4A1696524100DE6DDE /* bust-spanish.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D940DA441696524100DE6DDE /* bust-spanish.pdf */; };
+		D940DA4B1696524100DE6DDE /* info-english.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D940DA451696524100DE6DDE /* info-english.pdf */; };
+		D940DA4C1696524100DE6DDE /* info-spanish.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D940DA461696524100DE6DDE /* info-spanish.pdf */; };
+		D940DA4D1696524100DE6DDE /* kyr-english.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D940DA471696524100DE6DDE /* kyr-english.pdf */; };
+		D940DA4E1696524100DE6DDE /* kyr-spanish.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D940DA481696524100DE6DDE /* kyr-spanish.pdf */; };
+		D940DA50169653D800DE6DDE /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D940DA4F169653D800DE6DDE /* QuickLook.framework */; };
+		D940DA531696565500DE6DDE /* OWPreviewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D940DA521696565500DE6DDE /* OWPreviewItem.m */; };
 		D94502AB16962BBD003BEF5E /* 14-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = D94502A916962BBD003BEF5E /* 14-gear.png */; };
 		D94502AC16962BBD003BEF5E /* 14-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D94502AA16962BBD003BEF5E /* 14-gear@2x.png */; };
 		D94502AF16962E5F003BEF5E /* body_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D94502AD16962E5F003BEF5E /* body_bg.png */; };
@@ -139,6 +148,17 @@
 		D90696681694CED1006FEA8C /* OWACLUAZUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWACLUAZUtilities.h; sourceTree = "<group>"; };
 		D90696691694CED1006FEA8C /* OWACLUAZUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWACLUAZUtilities.m; sourceTree = "<group>"; };
 		D940DA3D1696408F00DE6DDE /* logo@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logo@2x.jpg"; sourceTree = "<group>"; };
+		D940DA3F169651C400DE6DDE /* OWRightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWRightsViewController.h; sourceTree = "<group>"; };
+		D940DA40169651C400DE6DDE /* OWRightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWRightsViewController.m; sourceTree = "<group>"; };
+		D940DA431696524100DE6DDE /* bust-english.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "bust-english.pdf"; sourceTree = "<group>"; };
+		D940DA441696524100DE6DDE /* bust-spanish.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "bust-spanish.pdf"; sourceTree = "<group>"; };
+		D940DA451696524100DE6DDE /* info-english.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "info-english.pdf"; sourceTree = "<group>"; };
+		D940DA461696524100DE6DDE /* info-spanish.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "info-spanish.pdf"; sourceTree = "<group>"; };
+		D940DA471696524100DE6DDE /* kyr-english.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "kyr-english.pdf"; sourceTree = "<group>"; };
+		D940DA481696524100DE6DDE /* kyr-spanish.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "kyr-spanish.pdf"; sourceTree = "<group>"; };
+		D940DA4F169653D800DE6DDE /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		D940DA511696565500DE6DDE /* OWPreviewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWPreviewItem.h; sourceTree = "<group>"; };
+		D940DA521696565500DE6DDE /* OWPreviewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWPreviewItem.m; sourceTree = "<group>"; };
 		D94502A916962BBD003BEF5E /* 14-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "14-gear.png"; sourceTree = "<group>"; };
 		D94502AA16962BBD003BEF5E /* 14-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "14-gear@2x.png"; sourceTree = "<group>"; };
 		D94502AD16962E5F003BEF5E /* body_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_bg.png; sourceTree = "<group>"; };
@@ -245,6 +265,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D940DA50169653D800DE6DDE /* QuickLook.framework in Frameworks */,
 				D9FBAEAB1694F21700F70E2C /* CoreData.framework in Frameworks */,
 				D906964C1694BDD6006FEA8C /* libQuickDialog.a in Frameworks */,
 				D906964B1694BDD4006FEA8C /* MapKit.framework in Frameworks */,
@@ -261,6 +282,7 @@
 		D903ADA6168CD3F2003D8A23 = {
 			isa = PBXGroup;
 			children = (
+				D940DA4F169653D800DE6DDE /* QuickLook.framework */,
 				D9FBAEAA1694F21700F70E2C /* CoreData.framework */,
 				D903ADD5168CD79D003D8A23 /* Media */,
 				D903ADBB168CD3F2003D8A23 /* ACLU AZ */,
@@ -303,6 +325,10 @@
 				D90696691694CED1006FEA8C /* OWACLUAZUtilities.m */,
 				D903ADD2168CD4CB003D8A23 /* OWACLUAZHomeViewController.h */,
 				D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */,
+				D940DA511696565500DE6DDE /* OWPreviewItem.h */,
+				D940DA521696565500DE6DDE /* OWPreviewItem.m */,
+				D940DA3F169651C400DE6DDE /* OWRightsViewController.h */,
+				D940DA40169651C400DE6DDE /* OWRightsViewController.m */,
 				D906964D1694C074006FEA8C /* OWUserInfoViewController.h */,
 				D906964E1694C074006FEA8C /* OWUserInfoViewController.m */,
 				D9FBAE421694E55B00F70E2C /* OWUserInfoController.h */,
@@ -333,6 +359,7 @@
 		D903ADD5168CD79D003D8A23 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				D940DA421696524100DE6DDE /* PDFs */,
 				D94502B516963759003BEF5E /* buttons */,
 				D94502AD16962E5F003BEF5E /* body_bg.png */,
 				D94502AE16962E5F003BEF5E /* body_bg@2x.png */,
@@ -400,6 +427,19 @@
 			);
 			name = JSONKit;
 			path = "Submodules/OpenWatch-iOS/Submodules/JSONKit";
+			sourceTree = "<group>";
+		};
+		D940DA421696524100DE6DDE /* PDFs */ = {
+			isa = PBXGroup;
+			children = (
+				D940DA431696524100DE6DDE /* bust-english.pdf */,
+				D940DA441696524100DE6DDE /* bust-spanish.pdf */,
+				D940DA451696524100DE6DDE /* info-english.pdf */,
+				D940DA461696524100DE6DDE /* info-spanish.pdf */,
+				D940DA471696524100DE6DDE /* kyr-english.pdf */,
+				D940DA481696524100DE6DDE /* kyr-spanish.pdf */,
+			);
+			path = PDFs;
 			sourceTree = "<group>";
 		};
 		D94502B516963759003BEF5E /* buttons */ = {
@@ -635,6 +675,12 @@
 				D94502DD16963759003BEF5E /* greenButtonHighlight.png in Resources */,
 				D94502DE16963759003BEF5E /* greenButtonHighlight@2x.png in Resources */,
 				D940DA3E1696408F00DE6DDE /* logo@2x.jpg in Resources */,
+				D940DA491696524100DE6DDE /* bust-english.pdf in Resources */,
+				D940DA4A1696524100DE6DDE /* bust-spanish.pdf in Resources */,
+				D940DA4B1696524100DE6DDE /* info-english.pdf in Resources */,
+				D940DA4C1696524100DE6DDE /* info-spanish.pdf in Resources */,
+				D940DA4D1696524100DE6DDE /* kyr-english.pdf in Resources */,
+				D940DA4E1696524100DE6DDE /* kyr-spanish.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,6 +733,8 @@
 				D9FBAEA81694F13A00F70E2C /* MagicalRecord+ShorthandSupport.m in Sources */,
 				D9FBAEA91694F13A00F70E2C /* MagicalRecord.m in Sources */,
 				D9FBAED81695203A00F70E2C /* OWReportListViewController.m in Sources */,
+				D940DA41169651C400DE6DDE /* OWRightsViewController.m in Sources */,
+				D940DA531696565500DE6DDE /* OWPreviewItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
