@@ -45,3 +45,4 @@
 #define CANCEL_STRING NSLocalizedString(@"Cancel", @"Button title to cancel")
 #define ACLU_AZ_STRING NSLocalizedString(@"ACLU AZ", @"Name of ACLU Arizona")
 #define STOP_SB1070_STRING NSLocalizedString(@"Stop SB1070", @"Title")
+#define PRIVACY_NOTICE_STRING NSLocalizedString(@"We respect your privacy and will only use the contact information you provide to contact you regarding the complaint you submit today. Other than that, we will never send unsolicited email, or share personal information you submit. For further information, see our privacy statement.", @"Privacy notice")

@@ -10,7 +10,7 @@
 #import "OWReport.h"
 #import <CoreLocation/CoreLocation.h>
 
-@interface OWReportViewController : QuickDialogController < CLLocationManagerDelegate>
+@interface OWReportViewController : QuickDialogController < CLLocationManagerDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLLocation *lastLocation;

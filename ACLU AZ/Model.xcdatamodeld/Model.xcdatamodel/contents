@@ -8,9 +8,10 @@
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="locationString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="sendLocation" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="OWReport" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="OWReport" positionX="160" positionY="192" width="128" height="180"/>
     </elements>
 </model>

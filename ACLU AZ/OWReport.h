@@ -27,6 +27,7 @@
 @property (nonatomic, retain) NSString * incidentDescription;
 @property (nonatomic, retain) NSString * uuid;
 @property (nonatomic) BOOL isSubmitted;
+@property (nonatomic) BOOL sendLocation;
 
 - (void) loadValuesFromDictionary:(NSDictionary*)dictionary;
 - (NSDictionary*) dictionaryRepresentationForJSON:(BOOL)forJSON;

@@ -9,11 +9,17 @@
 #import "OWAppDelegate.h"
 #import "OWACLUAZHomeViewController.h"
 #import "OWACLUAZUtilities.h"
+#import "OWAPIKeys.h"
 
 @implementation OWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+#define TESTING 1
+#ifdef TESTING
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+#endif
+    [TestFlight takeOff:TESTFLIGHT_APP_TOKEN];
     [MagicalRecord setupCoreDataStack];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.

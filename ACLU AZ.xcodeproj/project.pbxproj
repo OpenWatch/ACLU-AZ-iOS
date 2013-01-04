@@ -53,6 +53,8 @@
 		D94502DC16963759003BEF5E /* greenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D94502BF16963759003BEF5E /* greenButton@2x.png */; };
 		D94502DD16963759003BEF5E /* greenButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D94502C016963759003BEF5E /* greenButtonHighlight.png */; };
 		D94502DE16963759003BEF5E /* greenButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D94502C116963759003BEF5E /* greenButtonHighlight@2x.png */; };
+		D9CA9CA516975B730068D336 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CA9CA016975B730068D336 /* libTestFlight.a */; };
+		D9CA9CD4169760080068D336 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CA9CD3169760080068D336 /* libz.dylib */; };
 		D9F6B9B1168CDDE10095D4FA /* OWACLUAZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */; };
 		D9F6B9B6168CE0B00095D4FA /* OWReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B9B5168CE0B00095D4FA /* OWReportViewController.m */; };
 		D9FBAE441694E55B00F70E2C /* OWUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FBAE431694E55B00F70E2C /* OWUserInfoController.m */; };
@@ -113,7 +115,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D903ADB1168CD3F2003D8A23 /* ACLU AZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ACLU AZ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D903ADB1168CD3F2003D8A23 /* Stop SB1070.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stop SB1070.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D903ADB5168CD3F2003D8A23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D903ADB7168CD3F2003D8A23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D903ADB9168CD3F2003D8A23 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -196,6 +198,10 @@
 		D94502D016963759003BEF5E /* whiteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButton@2x.png"; sourceTree = "<group>"; };
 		D94502D116963759003BEF5E /* whiteButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButtonHighlight.png; sourceTree = "<group>"; };
 		D94502D216963759003BEF5E /* whiteButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		D9CA9CA016975B730068D336 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		D9CA9CA316975B730068D336 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		D9CA9CA816975C2D0068D336 /* OWAPIKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWAPIKeys.h; sourceTree = "<group>"; };
+		D9CA9CD3169760080068D336 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWACLUAZHomeViewController.m; sourceTree = "<group>"; };
 		D9F6B9B3168CDEE00095D4FA /* OWACLUAZStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWACLUAZStrings.h; sourceTree = "<group>"; };
 		D9F6B9B4168CE0B00095D4FA /* OWReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWReportViewController.h; sourceTree = "<group>"; };
@@ -269,6 +275,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9CA9CD4169760080068D336 /* libz.dylib in Frameworks */,
 				D940DA50169653D800DE6DDE /* QuickLook.framework in Frameworks */,
 				D9FBAEAB1694F21700F70E2C /* CoreData.framework in Frameworks */,
 				D906964C1694BDD6006FEA8C /* libQuickDialog.a in Frameworks */,
@@ -277,6 +284,7 @@
 				D903ADB6168CD3F2003D8A23 /* UIKit.framework in Frameworks */,
 				D903ADB8168CD3F2003D8A23 /* Foundation.framework in Frameworks */,
 				D903ADBA168CD3F2003D8A23 /* CoreGraphics.framework in Frameworks */,
+				D9CA9CA516975B730068D336 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +294,7 @@
 		D903ADA6168CD3F2003D8A23 = {
 			isa = PBXGroup;
 			children = (
+				D9CA9CD3169760080068D336 /* libz.dylib */,
 				D940DA561696651500DE6DDE /* logo@2x.png */,
 				D940DA541696650E00DE6DDE /* logo.png */,
 				D940DA4F169653D800DE6DDE /* QuickLook.framework */,
@@ -301,7 +310,7 @@
 		D903ADB2168CD3F2003D8A23 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D903ADB1168CD3F2003D8A23 /* ACLU AZ.app */,
+				D903ADB1168CD3F2003D8A23 /* Stop SB1070.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				D9FBAE451694EADC00F70E2C /* Model.xcdatamodeld */,
+				D9CA9CA816975C2D0068D336 /* OWAPIKeys.h */,
 				D9FBAE4B1694EC4700F70E2C /* OWReport.h */,
 				D9FBAE4C1694EC4700F70E2C /* OWReport.m */,
 				D903ADC4168CD3F2003D8A23 /* OWAppDelegate.h */,
@@ -401,6 +411,7 @@
 				D9FBAE541694F13A00F70E2C /* MagicalRecord */,
 				D90696601694CE0C006FEA8C /* JSONKit */,
 				D90696381694BDBF006FEA8C /* QuickDialog.xcodeproj */,
+				D9CA9C9E16975B730068D336 /* TestFlight */,
 				D903ADEC168CDCE7003D8A23 /* OpenWatch */,
 				D903ADDD168CDCD6003D8A23 /* WEPopover */,
 			);
@@ -482,6 +493,16 @@
 				D94502D216963759003BEF5E /* whiteButtonHighlight@2x.png */,
 			);
 			path = buttons;
+			sourceTree = "<group>";
+		};
+		D9CA9C9E16975B730068D336 /* TestFlight */ = {
+			isa = PBXGroup;
+			children = (
+				D9CA9CA016975B730068D336 /* libTestFlight.a */,
+				D9CA9CA316975B730068D336 /* TestFlight.h */,
+			);
+			name = TestFlight;
+			path = "Submodules/OpenWatch-iOS/Submodules/TestFlight";
 			sourceTree = "<group>";
 		};
 		D9FBAE541694F13A00F70E2C /* MagicalRecord */ = {
@@ -604,7 +625,7 @@
 			);
 			name = "Stop SB1070";
 			productName = "ACLU AZ";
-			productReference = D903ADB1168CD3F2003D8A23 /* ACLU AZ.app */;
+			productReference = D903ADB1168CD3F2003D8A23 /* Stop SB1070.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -828,6 +849,10 @@
 				GCC_PREFIX_HEADER = "ACLU AZ/ACLU AZ-Prefix.pch";
 				INFOPLIST_FILE = "ACLU AZ/ACLU AZ-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Submodules/OpenWatch-iOS/Submodules/TestFlight\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -844,6 +869,10 @@
 				GCC_PREFIX_HEADER = "ACLU AZ/ACLU AZ-Prefix.pch";
 				INFOPLIST_FILE = "ACLU AZ/ACLU AZ-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Submodules/OpenWatch-iOS/Submodules/TestFlight\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

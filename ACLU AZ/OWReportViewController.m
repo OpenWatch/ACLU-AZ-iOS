@@ -10,6 +10,11 @@
 #import "OWACLUAZStrings.h"
 #import "OWReport.h"
 #import "OWACLUAZUtilities.h"
+#import "OWUserInfoController.h"
+#import "JSONKit.h"
+
+#define REPORT_KEY @"report"
+#define USER_KEY @"user"
 
 @interface OWReportViewController ()
 
@@ -83,7 +88,8 @@
     [context MR_saveNestedContexts];
     
     if ([report validate]) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:PRIVACY_NOTICE_STRING delegate:self cancelButtonTitle:CANCEL_STRING otherButtonTitles:SUBMIT_STRING, nil];
+        [alert show];
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:ERROR_STRING message:REQUIRED_VALUES_MSG_STRING delegate:nil cancelButtonTitle:OK_STRING otherButtonTitles: nil];
         [alert show];
@@ -113,6 +119,7 @@
     NSString *locationString = nil;
     CLLocation *location = nil;
     NSString *description = nil;
+    BOOL sendLocation = YES;
     
     if (report) {
         agency = report.agency;
@@ -120,6 +127,7 @@
         locationString = report.locationString;
         location = report.location;
         description = report.incidentDescription;
+        sendLocation = report.sendLocation;
     }
     
     
@@ -130,7 +138,7 @@
 	QSection *agencySection = [[QSection alloc] initWithTitle:AGENCY_DESCRIPTION_STRING];
     agencySection.footer = AGENCY_PLACEHOLDER_STRING;
     
-    QEntryElement *agencyElement = [[QEntryElement alloc] initWithTitle:AGENCY_STRING Value:agency Placeholder:REQUIRED_STRING];
+    QEntryElement *agencyElement = [[QEntryElement alloc] initWithTitle:AGENCY_STRING Value:agency];
     agencyElement.key = AGENCY_KEY;
     [OWACLUAZUtilities setBindValueForElement:agencyElement];
     [agencySection addElement:agencyElement];
@@ -142,7 +150,7 @@
     QEntryElement *locationElement = [[QEntryElement alloc] initWithTitle:INCIDENT_LOCATION_STRING Value:locationString Placeholder:REQUIRED_STRING];
     locationElement.key = LOCATION_KEY;
     [OWACLUAZUtilities setBindValueForElement:locationElement];
-    QBooleanElement *sendDeviceLocationElement = [[QBooleanElement alloc] initWithTitle:SEND_DEVICE_LOCATION_STRING BoolValue:YES];
+    QBooleanElement *sendDeviceLocationElement = [[QBooleanElement alloc] initWithTitle:SEND_DEVICE_LOCATION_STRING BoolValue:sendLocation];
     sendDeviceLocationElement.key = SEND_LOCATION_KEY;
     [OWACLUAZUtilities setBindValueForElement:sendDeviceLocationElement];
     
@@ -174,6 +182,23 @@
 
 - (void) refreshValues {
     [self.quickDialogTableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 3)] withRowAnimation:UITableViewRowAnimationFade];
+}
+
+- (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (alertView.cancelButtonIndex != buttonIndex) {
+        NSMutableDictionary *reportDictionary = [NSMutableDictionary dictionary];
+        [reportDictionary setObject:[report dictionaryRepresentationForJSON:YES] forKey:REPORT_KEY];
+        OWUserInfoController *userInfo = [OWUserInfoController sharedInstance];
+        [reportDictionary setObject:userInfo.data forKey:USER_KEY];
+        NSError *error = nil;
+        NSString *jsonString = [reportDictionary JSONStringWithOptions:JKSerializeOptionPretty error:&error];
+        if (error) {
+            NSLog(@"Error serializing JSON");
+        }
+        NSLog(@"jsonData: %@", jsonString);
+        
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 
 

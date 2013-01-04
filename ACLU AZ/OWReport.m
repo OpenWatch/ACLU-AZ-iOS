@@ -24,6 +24,7 @@
 @dynamic incidentDescription;
 @dynamic isSubmitted;
 @dynamic uuid;
+@dynamic sendLocation;
 
 - (void) loadValuesFromDictionary:(NSDictionary*)dictionary {
     self.agency = [dictionary objectForKey:AGENCY_KEY];
@@ -48,6 +49,12 @@
     if (uuid) {
         self.uuid = uuid;
     }
+    NSNumber *sendLocationNumber = [dictionary objectForKey:SEND_LOCATION_KEY];
+    if (sendLocationNumber) {
+        self.sendLocation = [sendLocationNumber boolValue];
+    } else {
+        self.sendLocation = YES;
+    }
 }
 
 - (NSDictionary*) dictionaryRepresentationForJSON:(BOOL)forJSON {
@@ -69,16 +76,18 @@
     if (self.locationString) {
         [dictionary setObject:self.locationString forKey:LOCATION_KEY];
     }
-    if (self.latitude != 0.0f) {
-        [dictionary setObject:@(self.latitude) forKey:LATITUDE_KEY];
-    }
-    if (self.longitude != 0.0f) {
-        [dictionary setObject:@(self.longitude) forKey:LONGITUDE_KEY];
+    if (self.sendLocation) {
+        if (self.latitude != 0.0f) {
+            [dictionary setObject:@(self.latitude) forKey:LATITUDE_KEY];
+        }
+        if (self.longitude != 0.0f) {
+            [dictionary setObject:@(self.longitude) forKey:LONGITUDE_KEY];
+        }
     }
     if (self.uuid) {
         [dictionary setObject:self.uuid forKey:UUID_KEY];
     }
-    [dictionary setObject:@(YES) forKey:SEND_LOCATION_KEY];
+    [dictionary setObject:@(self.sendLocation) forKey:SEND_LOCATION_KEY];
     return dictionary;
 }
 
@@ -95,7 +104,7 @@
 }
 
 - (BOOL) validate {
-    return self.agency.length > 0 && self.locationString.length > 0 && self.incidentDescription.length > 0;
+    return self.locationString.length > 0 && self.incidentDescription.length > 0;
 }
 
 @end
