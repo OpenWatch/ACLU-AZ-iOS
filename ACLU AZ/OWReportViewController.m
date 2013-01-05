@@ -79,8 +79,7 @@
 - (void) submitButtonPressed:(id)sender {
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
     [self.root fetchValueIntoObject:data];
-    NSLog(@"data: %@", [data description]);
-        
+    
     if (!report) {
         report = [OWReport MR_createEntity];
         report.uuid = [OWACLUAZUtilities createUUID];
@@ -88,7 +87,6 @@
     }
     [report loadValuesFromDictionary:data];
     report.location = lastLocation;
-    NSLog(@"report: %@", [report description]);
     NSManagedObjectContext *context = [NSManagedObjectContext MR_contextForCurrentThread];
     [context MR_saveNestedContexts];
     
@@ -198,24 +196,37 @@
         [self loading:YES];
         self.submitButton.enabled = NO;
         [[OWACLUClient sharedClient] postPath:@"submit/" parameters:reportDictionary success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSLog(@"response: %@", [responseObject description]);
             [self loading:NO];
             self.submitButton.enabled = YES;
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:SUCCESS_STRING message:SUCCESS_MSG_STRING delegate:nil cancelButtonTitle:OK_STRING otherButtonTitles: nil];
-            [alert show];
-            [self.navigationController popToRootViewControllerAnimated:YES];
+
+            BOOL success = [[responseObject objectForKey:@"success"] boolValue];
+            if (success) {
+                report.isSubmitted = YES;
+                NSManagedObjectContext *context = [NSManagedObjectContext MR_contextForCurrentThread];
+                [context MR_saveNestedContexts];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:SUCCESS_STRING message:SUCCESS_MSG_STRING delegate:nil cancelButtonTitle:OK_STRING otherButtonTitles: nil];
+                [alert show];
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            } else {
+                [self showError];
+            }
+
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             
             NSLog(@"Error with API request: %@%@", [error localizedDescription], [error userInfo]);
             NSLog(@"Error Response: %@", operation.responseString);
             NSLog(@"Request: %@", [operation.request description]);
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:ERROR_STRING message:INTERNET_CONNECTION_WARNING_STRING delegate:nil cancelButtonTitle:OK_STRING otherButtonTitles: nil];
-            [alert show];
+            [self showError];
             [self loading:NO];
             self.submitButton.enabled = YES;
         }];
         
     }
+}
+
+- (void) showError {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:ERROR_STRING message:INTERNET_CONNECTION_WARNING_STRING delegate:nil cancelButtonTitle:OK_STRING otherButtonTitles: nil];
+    [alert show];
 }
 
 
