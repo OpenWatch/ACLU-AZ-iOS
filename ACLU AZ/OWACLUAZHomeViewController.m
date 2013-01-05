@@ -31,7 +31,7 @@
         [self setupBannerImage];
         [self setupButtons];
 
-        self.settingsButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"14-gear.png"] style:UIBarButtonItemStylePlain target:self action:@selector(infoButtonPressed:)];
+        self.settingsButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"list.png"] style:UIBarButtonItemStylePlain target:self action:@selector(infoButtonPressed:)];
         self.navigationItem.rightBarButtonItem = settingsButton;
         
         self.aboutButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"about_icon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(aboutButtonPressed:)];
