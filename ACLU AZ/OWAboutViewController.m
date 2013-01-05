@@ -80,6 +80,7 @@
     label.backgroundColor = [UIColor clearColor];
     label.shadowOffset = CGSizeMake(0, 1);
     label.textAlignment = UITextAlignmentCenter;
+    label.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)didReceiveMemoryWarning
