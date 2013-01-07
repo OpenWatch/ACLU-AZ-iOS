@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OWSegmentedRightsViewController : UIViewController
+@interface OWSegmentedRightsViewController : UIViewController <UIScrollViewDelegate>
+
+@property (nonatomic, strong) UISegmentedControl *segmentedControl;
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) NSArray *rightsViews;
+@property (nonatomic, strong) UIToolbar *toolbar;
 
 @end

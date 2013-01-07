@@ -16,6 +16,7 @@
 #import "OWACLUAZUtilities.h"
 #import "OWRightsViewController.h"
 #import "OWAboutViewController.h"
+#import "OWSegmentedRightsViewController.h"
 
 @interface OWACLUAZHomeViewController ()
 
@@ -148,7 +149,8 @@
 }
 
 - (void) rightsButtonPressed:(id)sender {
-    OWRightsViewController *rightsVC = [[OWRightsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    /*OWRightsViewController *rightsVC = [[OWRightsViewController alloc] initWithStyle:UITableViewStyleGrouped];*/
+    OWSegmentedRightsViewController *rightsVC = [[OWSegmentedRightsViewController alloc] init];
     [self.navigationController pushViewController:rightsVC animated:YES];
 }
 

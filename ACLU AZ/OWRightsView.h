@@ -13,5 +13,8 @@
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UITextView *textView;
+@property (nonatomic, strong) NSString *segmentTitle;
+
+- (void) setTitle:(NSString*)title body:(NSString*)body imageName:(NSString*)imageName segmentTitle:(NSString*)segmentTitleString;
 
 @end
