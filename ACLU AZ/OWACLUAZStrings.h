@@ -8,6 +8,7 @@
 
 #define REPORT_STRING NSLocalizedString(@"Report", "Title for button to report an incident")
 #define KNOW_YOUR_RIGHTS_STRING NSLocalizedString(@"Know Your Rights", "Title for button to get more information about your rights")
+#define RIGHTS_STRING NSLocalizedString(@"Rights", @"rights title")
 #define USER_INFO_STRING NSLocalizedString(@"User Info", @"Title for user information screen")
 #define FIRST_NAME_STRING NSLocalizedString(@"First Name", "Title for first name field")
 #define LAST_NAME_STRING NSLocalizedString(@"Last Name", "Title for last name field")
@@ -72,3 +73,4 @@
 #define JAIL_STRING NSLocalizedString(@"Jail", @"title for jail")
 #define JAIL_TITLE_STRING NSLocalizedString(@"In Jail", @"title for in jail")
 #define JAIL_TEXTVIEW_STRING NSLocalizedString(@"If you are arrested and taken to jail you may be asked questions about where you were born, how you entered the U.S. or how long you've been here. You do not have to answer these questions. This information can be used to detain and deport you.", @"jail info text")
+#define CALL_ACLU_STRING NSLocalizedString(@"Call the ACLU of Arizona?", @"call aclu string")

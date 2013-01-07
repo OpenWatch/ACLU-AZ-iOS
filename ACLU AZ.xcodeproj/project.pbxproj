@@ -78,6 +78,8 @@
 		D9AF4BC6169B818E00469DB7 /* street@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9AF4BBC169B818E00469DB7 /* street@2x.png */; };
 		D9AF4BC9169B885F00469DB7 /* satinweave.png in Resources */ = {isa = PBXBuildFile; fileRef = D9AF4BC7169B885F00469DB7 /* satinweave.png */; };
 		D9AF4BCA169B885F00469DB7 /* satinweave@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9AF4BC8169B885F00469DB7 /* satinweave@2x.png */; };
+		D9AF4BCD169B8B5F00469DB7 /* 75-phone.png in Resources */ = {isa = PBXBuildFile; fileRef = D9AF4BCB169B8B5F00469DB7 /* 75-phone.png */; };
+		D9AF4BCE169B8B5F00469DB7 /* 75-phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9AF4BCC169B8B5F00469DB7 /* 75-phone@2x.png */; };
 		D9CA9CA516975B730068D336 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CA9CA016975B730068D336 /* libTestFlight.a */; };
 		D9CA9CD4169760080068D336 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CA9CD3169760080068D336 /* libz.dylib */; };
 		D9F6B9B1168CDDE10095D4FA /* OWACLUAZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */; };
@@ -270,6 +272,8 @@
 		D9AF4BBC169B818E00469DB7 /* street@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "street@2x.png"; sourceTree = "<group>"; };
 		D9AF4BC7169B885F00469DB7 /* satinweave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = satinweave.png; sourceTree = "<group>"; };
 		D9AF4BC8169B885F00469DB7 /* satinweave@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "satinweave@2x.png"; sourceTree = "<group>"; };
+		D9AF4BCB169B8B5F00469DB7 /* 75-phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "75-phone.png"; sourceTree = "<group>"; };
+		D9AF4BCC169B8B5F00469DB7 /* 75-phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "75-phone@2x.png"; sourceTree = "<group>"; };
 		D9CA9CA016975B730068D336 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		D9CA9CA316975B730068D336 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		D9CA9CA816975C2D0068D336 /* OWAPIKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWAPIKeys.h; sourceTree = "<group>"; };
@@ -475,6 +479,8 @@
 				D99827D11697BCA8008828A9 /* list@2x.png */,
 				D903ADD7168CD79D003D8A23 /* aclu-logo.jpg */,
 				D940DA3D1696408F00DE6DDE /* aclu-logo@2x.jpg */,
+				D9AF4BCB169B8B5F00469DB7 /* 75-phone.png */,
+				D9AF4BCC169B8B5F00469DB7 /* 75-phone@2x.png */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -874,6 +880,8 @@
 				D9AF4BC6169B818E00469DB7 /* street@2x.png in Resources */,
 				D9AF4BC9169B885F00469DB7 /* satinweave.png in Resources */,
 				D9AF4BCA169B885F00469DB7 /* satinweave@2x.png in Resources */,
+				D9AF4BCD169B8B5F00469DB7 /* 75-phone.png in Resources */,
+				D9AF4BCE169B8B5F00469DB7 /* 75-phone@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

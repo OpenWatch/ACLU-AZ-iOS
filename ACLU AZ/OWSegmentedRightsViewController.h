@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OWSegmentedRightsViewController : UIViewController <UIScrollViewDelegate>
+@interface OWSegmentedRightsViewController : UIViewController <UIScrollViewDelegate, UIActionSheetDelegate>
 
 @property (nonatomic, strong) UISegmentedControl *segmentedControl;
 @property (nonatomic, strong) UIScrollView *scrollView;

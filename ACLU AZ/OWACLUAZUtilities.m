@@ -60,7 +60,7 @@
 }
 
 + (NSString*) acluAPIURLString {
-    return @"http://192.168.1.38:8000/";
+    return @"https://az.openwatch.net/";
 }
 
 + (void) setShadowForView:(UIView*)view {

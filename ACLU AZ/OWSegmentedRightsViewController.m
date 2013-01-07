@@ -21,7 +21,7 @@
 {
     self = [super init];
     if (self) {
-        self.title = KNOW_YOUR_RIGHTS_STRING;
+        self.title = RIGHTS_STRING;
     }
     return self;
 }
@@ -90,6 +90,18 @@
 {
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"satinweave.png"]];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"75-phone.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(phoneButtonPressed:)];
+}
+
+- (void) phoneButtonPressed:(id)sender {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:CALL_ACLU_STRING delegate:self cancelButtonTitle:CANCEL_STRING destructiveButtonTitle:nil otherButtonTitles:@"1-855-ACLUAZ-1", nil];
+    [actionSheet showFromToolbar:toolbar];
+}
+
+- (void) actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (actionSheet.cancelButtonIndex != buttonIndex) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:1-855-225-8291"]];
+    }
 }
 
 - (CGRect) frameForToolbar {
@@ -124,6 +136,5 @@
     int page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     self.segmentedControl.selectedSegmentIndex = page;
 }
-
 
 @end

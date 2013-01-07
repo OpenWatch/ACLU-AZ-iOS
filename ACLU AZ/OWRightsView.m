@@ -25,8 +25,8 @@
         self.titleLabel.textAlignment = UITextAlignmentCenter;
         self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f];
         self.titleLabel.textColor = [UIColor colorWithRed:0.8 green:0 blue:0 alpha:1.0f];
-        self.titleLabel.shadowColor = [UIColor blackColor];
-        self.titleLabel.shadowOffset = CGSizeMake(0, -1);
+        //self.titleLabel.shadowColor = [UIColor blackColor];
+        //self.titleLabel.shadowOffset = CGSizeMake(0, -1);
         self.textView = [[UITextView alloc] initWithFrame:CGRectMake(padding, [OWUtilities bottomOfView:titleLabel], frame.size.width - padding*2, frame.size.height-[OWUtilities bottomOfView:titleLabel])];
         self.textView.backgroundColor = [UIColor clearColor];
         self.textView.editable = NO;
