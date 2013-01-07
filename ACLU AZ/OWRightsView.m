@@ -7,7 +7,7 @@
 //
 
 #import "OWRightsView.h"
-#import "OWUtilities.h"
+#import "OWACLUAZUtilities.h"
 
 @implementation OWRightsView
 @synthesize imageView, titleLabel, textView;
@@ -20,14 +20,14 @@
         CGFloat imagePadding = floorf((self.frame.size.width - imageViewWidth) / 2);
         CGFloat padding = 10.0f;
         self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(imagePadding, padding, imageViewWidth, 124)];
-        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, [OWUtilities bottomOfView:imageView], frame.size.width, 30)];
+        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, [OWACLUAZUtilities bottomOfView:imageView], frame.size.width, 30)];
         self.titleLabel.backgroundColor = [UIColor clearColor];
         self.titleLabel.textAlignment = UITextAlignmentCenter;
         self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f];
         self.titleLabel.textColor = [UIColor colorWithRed:0.8 green:0 blue:0 alpha:1.0f];
         //self.titleLabel.shadowColor = [UIColor blackColor];
         //self.titleLabel.shadowOffset = CGSizeMake(0, -1);
-        self.textView = [[UITextView alloc] initWithFrame:CGRectMake(padding, [OWUtilities bottomOfView:titleLabel], frame.size.width - padding*2, frame.size.height-[OWUtilities bottomOfView:titleLabel])];
+        self.textView = [[UITextView alloc] initWithFrame:CGRectMake(padding, [OWACLUAZUtilities bottomOfView:titleLabel], frame.size.width - padding*2, frame.size.height-[OWACLUAZUtilities bottomOfView:titleLabel])];
         self.textView.backgroundColor = [UIColor clearColor];
         self.textView.editable = NO;
         self.textView.font = [UIFont fontWithName:@"HelveticaNeue" size:16.0f];

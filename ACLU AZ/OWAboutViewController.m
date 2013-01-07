@@ -9,7 +9,6 @@
 #import "OWAboutViewController.h"
 #import "OWACLUAZStrings.h"
 #import "OWACLUAZUtilities.h"
-#import "OWUtilities.h"
 
 @interface OWAboutViewController ()
 
@@ -99,10 +98,10 @@
     CGFloat bottomViewHeight = 60.0f;
 
     self.acluButton.frame = CGRectMake(padding, padding*2, width-padding*2, bannerHeight);
-    self.aboutTextView.frame = CGRectMake(padding, [OWUtilities bottomOfView:acluButton], width-padding*2, height - [OWUtilities bottomOfView:acluButton] - bottomViewHeight);
+    self.aboutTextView.frame = CGRectMake(padding, [OWACLUAZUtilities bottomOfView:acluButton], width-padding*2, height - [OWACLUAZUtilities bottomOfView:acluButton] - bottomViewHeight);
     self.aboutTextView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight;
-    self.poweredByLabel.frame = CGRectMake(padding, [OWUtilities bottomOfView:aboutTextView], width/2-padding*2, bottomViewHeight);
-    self.openwatchButton.frame = CGRectMake([OWUtilities rightOfView:poweredByLabel], [OWUtilities bottomOfView:aboutTextView], 150, bottomViewHeight);
+    self.poweredByLabel.frame = CGRectMake(padding, [OWACLUAZUtilities bottomOfView:aboutTextView], width/2-padding*2, bottomViewHeight);
+    self.openwatchButton.frame = CGRectMake([OWACLUAZUtilities rightOfView:poweredByLabel], [OWACLUAZUtilities bottomOfView:aboutTextView], 150, bottomViewHeight);
     self.poweredByLabel.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     self.openwatchButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
 }

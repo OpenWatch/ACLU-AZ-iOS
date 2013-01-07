@@ -7,7 +7,7 @@
 //
 
 #import "OWReport.h"
-#import "OWUtilities.h"
+#import "OWACLUAZUtilities.h"
 
 @interface OWReport()
 @property (nonatomic) double latitude;
@@ -33,7 +33,7 @@
     if ([dateObject isKindOfClass:[NSDate class]]) {
         self.date = (NSDate*)dateObject;
     } else if ([dateObject isKindOfClass:[NSString class]]) {
-        NSDateFormatter *dateFormatter = [OWUtilities utcDateFormatter];
+        NSDateFormatter *dateFormatter = [OWACLUAZUtilities utcDateFormatter];
         self.date = [dateFormatter dateFromString:(NSString*)dateObject];
     }
     self.locationString = [dictionary objectForKey:LOCATION_KEY];
@@ -67,7 +67,7 @@
     }
     if (self.date) {
         if (forJSON) {
-            NSDateFormatter *dateFormatter = [OWUtilities utcDateFormatter];
+            NSDateFormatter *dateFormatter = [OWACLUAZUtilities utcDateFormatter];
             [dictionary setObject:[dateFormatter stringFromDate:self.date] forKey:DATE_KEY];
         } else {
             [dictionary setObject:self.date forKey:DATE_KEY];

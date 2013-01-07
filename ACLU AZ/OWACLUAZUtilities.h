@@ -22,4 +22,10 @@
 
 + (void) setShadowForView:(UIView*)view;
 
++ (CGFloat) bottomOfView:(UIView*)view;
++ (CGFloat) rightOfView:(UIView*)view;
++ (NSDateFormatter*) utcDateFormatter;
++ (NSDateFormatter*) localDateFormatter;
+
+
 @end

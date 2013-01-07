@@ -71,5 +71,28 @@
     view.clipsToBounds = NO;
 }
 
++ (CGFloat) bottomOfView:(UIView *)view {
+    return view.frame.origin.y + view.frame.size.height;
+}
+
++ (CGFloat) rightOfView:(UIView *)view {
+    return view.frame.origin.x + view.frame.size.width;
+}
+
++ (NSDateFormatter*) utcDateFormatter {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyy-MM-dd' 'HH:mm:ss";
+    dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+    return dateFormatter;
+}
+
+
++ (NSDateFormatter*) localDateFormatter {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyy-MM-dd' 'h:mm a";
+    dateFormatter.timeZone = [NSTimeZone localTimeZone];
+    dateFormatter.locale = [NSLocale currentLocale];
+    return dateFormatter;
+}
 
 @end

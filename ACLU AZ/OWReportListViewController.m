@@ -9,7 +9,7 @@
 #import "OWReportListViewController.h"
 #import "OWReport.h"
 #import "OWReportViewController.h"
-#import "OWUtilities.h"
+#import "OWACLUAZUtilities.h"
 #import "OWACLUAZStrings.h"
 
 @interface OWReportListViewController ()
@@ -67,7 +67,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     OWReport *report = [reports objectAtIndex:indexPath.row];
-    NSDateFormatter *dateFormatter = [OWUtilities localDateFormatter];
+    NSDateFormatter *dateFormatter = [OWACLUAZUtilities localDateFormatter];
     cell.textLabel.text = [dateFormatter stringFromDate:report.date];
     
     if (report.isSubmitted) {

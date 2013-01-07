@@ -7,7 +7,6 @@
 //
 
 #import "OWACLUAZHomeViewController.h"
-#import "OWUtilities.h"
 #import "OWACLUAZStrings.h"
 #import "OWUserInfoViewController.h"
 #import "OWUserInfoController.h"
@@ -67,7 +66,7 @@
     [self.rightsButton addTarget:self action:@selector(rightsButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     self.reportButton.frame = CGRectMake(0, 0, buttonWidth, buttonHeight);
-    self.rightsButton.frame = CGRectMake(0, [OWUtilities bottomOfView:reportButton]+padding*2, buttonWidth, buttonHeight);
+    self.rightsButton.frame = CGRectMake(0, [OWACLUAZUtilities bottomOfView:reportButton]+padding*2, buttonWidth, buttonHeight);
     
     [OWACLUAZUtilities setShadowForView:reportButton];
     [OWACLUAZUtilities setShadowForView:rightsButton];
@@ -127,7 +126,7 @@
 
     self.bannerImageView.frame = CGRectMake(padding, padding*2, width-padding*2, bannerHeight);
     CGFloat buttonViewXOrigin = floorf(width/2-buttonView.frame.size.width/2);
-    CGFloat buttonViewYOrigin = floorf([OWUtilities bottomOfView:bannerImageView] + ((height - [OWUtilities bottomOfView:bannerImageView]) / 2) - (buttonView.frame.size.height/2));
+    CGFloat buttonViewYOrigin = floorf([OWACLUAZUtilities bottomOfView:bannerImageView] + ((height - [OWACLUAZUtilities bottomOfView:bannerImageView]) / 2) - (buttonView.frame.size.height/2));
     self.buttonView.frame = CGRectMake(buttonViewXOrigin, buttonViewYOrigin, buttonView.frame.size.width, buttonView.frame.size.height);
     
 }

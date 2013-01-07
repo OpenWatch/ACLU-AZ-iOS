@@ -1,6 +1,12 @@
-[submodule "Submodules/OpenWatch-iOS"]
-	path = Submodules/OpenWatch-iOS
-	url = git@github.com:OpenWatch/OpenWatch-iOS.git
 [submodule "Submodules/QuickDialog"]
 	path = Submodules/QuickDialog
 	url = git@github.com:OpenWatch/QuickDialog.git
+[submodule "Submodules/AFNetworking"]
+	path = Submodules/AFNetworking
+	url = git://github.com/AFNetworking/AFNetworking.git
+[submodule "Submodules/TestFlight"]
+	path = Submodules/TestFlight
+	url = git@github.com:OpenWatch/TestFlight-SDK.git
+[submodule "Submodules/MagicalRecord"]
+	path = Submodules/MagicalRecord
+	url = git://github.com/magicalpanda/MagicalRecord.git
