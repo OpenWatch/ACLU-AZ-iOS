@@ -70,6 +70,8 @@
 		D99827AF16979C1E008828A9 /* openwatch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D99827AD16979C1E008828A9 /* openwatch@2x.png */; };
 		D99827D21697BCA8008828A9 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = D99827D01697BCA8008828A9 /* list.png */; };
 		D99827D31697BCA8008828A9 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D99827D11697BCA8008828A9 /* list@2x.png */; };
+		D9AF4B97169B4CDC00469DB7 /* OWSegmentedRightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AF4B96169B4CDC00469DB7 /* OWSegmentedRightsViewController.m */; };
+		D9AF4B9A169B526A00469DB7 /* OWRightsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AF4B99169B526A00469DB7 /* OWRightsView.m */; };
 		D9CA9CA516975B730068D336 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CA9CA016975B730068D336 /* libTestFlight.a */; };
 		D9CA9CD4169760080068D336 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CA9CD3169760080068D336 /* libz.dylib */; };
 		D9F6B9B1168CDDE10095D4FA /* OWACLUAZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B9B0168CDDE10095D4FA /* OWACLUAZHomeViewController.m */; };
@@ -246,6 +248,10 @@
 		D99827AD16979C1E008828A9 /* openwatch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openwatch@2x.png"; sourceTree = "<group>"; };
 		D99827D01697BCA8008828A9 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
 		D99827D11697BCA8008828A9 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
+		D9AF4B95169B4CDC00469DB7 /* OWSegmentedRightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWSegmentedRightsViewController.h; sourceTree = "<group>"; };
+		D9AF4B96169B4CDC00469DB7 /* OWSegmentedRightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWSegmentedRightsViewController.m; sourceTree = "<group>"; };
+		D9AF4B98169B526A00469DB7 /* OWRightsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWRightsView.h; sourceTree = "<group>"; };
+		D9AF4B99169B526A00469DB7 /* OWRightsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWRightsView.m; sourceTree = "<group>"; };
 		D9CA9CA016975B730068D336 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		D9CA9CA316975B730068D336 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		D9CA9CA816975C2D0068D336 /* OWAPIKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWAPIKeys.h; sourceTree = "<group>"; };
@@ -397,6 +403,10 @@
 				D998272A16977FA5008828A9 /* OWAboutViewController.m */,
 				D940DA511696565500DE6DDE /* OWPreviewItem.h */,
 				D940DA521696565500DE6DDE /* OWPreviewItem.m */,
+				D9AF4B95169B4CDC00469DB7 /* OWSegmentedRightsViewController.h */,
+				D9AF4B96169B4CDC00469DB7 /* OWSegmentedRightsViewController.m */,
+				D9AF4B98169B526A00469DB7 /* OWRightsView.h */,
+				D9AF4B99169B526A00469DB7 /* OWRightsView.m */,
 				D940DA3F169651C400DE6DDE /* OWRightsViewController.h */,
 				D940DA40169651C400DE6DDE /* OWRightsViewController.m */,
 				D906964D1694C074006FEA8C /* OWUserInfoViewController.h */,
@@ -868,6 +878,8 @@
 				D998274F16978701008828A9 /* AFXMLRequestOperation.m in Sources */,
 				D998275016978701008828A9 /* UIImageView+AFNetworking.m in Sources */,
 				D998277D169787C9008828A9 /* OWACLUClient.m in Sources */,
+				D9AF4B97169B4CDC00469DB7 /* OWSegmentedRightsViewController.m in Sources */,
+				D9AF4B9A169B526A00469DB7 /* OWRightsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
