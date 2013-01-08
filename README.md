@@ -3,6 +3,13 @@ ACLU AZ - Stop SB 1070
 
 iOS app for reporting abuses of the Arizona SB 1070 law to the ACLU of Arizona.
 
+Screenshots
+-----------
+
+![Screenshot](https://raw.github.com/OpenWatch/ACLU-AZ-iOS/master/Media/screenshots/homescreen-github.png)
+
+License
+-----------
 Copyright (C) 2013, [OpenWatch FPC](http://openwatch.net)
 
 	This program is free software: you can redistribute it and/or modify
