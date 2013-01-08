@@ -991,6 +991,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACLU AZ/ACLU AZ-Prefix.pch";
 				INFOPLIST_FILE = "ACLU AZ/ACLU AZ-Info.plist";
@@ -1001,6 +1002,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Submodules\"/**";
 				WRAPPER_EXTENSION = app;
@@ -1011,6 +1013,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Richard Jones";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Richard Jones";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACLU AZ/ACLU AZ-Prefix.pch";
 				INFOPLIST_FILE = "ACLU AZ/ACLU AZ-Info.plist";
@@ -1021,6 +1025,8 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "CF6A1EED-6841-4535-B832-CF4F4A131E21";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CF6A1EED-6841-4535-B832-CF4F4A131E21";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Submodules\"/**";
 				WRAPPER_EXTENSION = app;
