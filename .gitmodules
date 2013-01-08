@@ -10,3 +10,6 @@
 [submodule "Submodules/MagicalRecord"]
 	path = Submodules/MagicalRecord
 	url = git://github.com/magicalpanda/MagicalRecord.git
+[submodule "Submodules/JSONKit"]
+	path = Submodules/JSONKit
+	url = git://github.com/johnezang/JSONKit.git
