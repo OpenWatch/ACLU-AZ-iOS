@@ -6,7 +6,7 @@ iOS app for reporting abuses of the Arizona SB 1070 law to the ACLU of Arizona.
 Screenshots
 -----------
 
-![Screenshot](https://raw.github.com/OpenWatch/ACLU-AZ-iOS/master/Media/screenshots/homescreen-github.png)
+![Screenshot](https://raw.github.com/OpenWatch/ACLU-AZ-iOS/master/Media/screenshots/english/homescreen-github.png)
 
 License
 -----------
