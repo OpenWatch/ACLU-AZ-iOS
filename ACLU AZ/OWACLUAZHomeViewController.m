@@ -90,6 +90,7 @@
     [self.rightsButton setTitle:KNOW_YOUR_RIGHTS_STRING forState:UIControlStateNormal];
     [self.languageButton setTitle:EN_ESPANOL_STRING forState:UIControlStateNormal];
     [self.languageButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.languageButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
 
     
     self.reportButton.frame = CGRectMake(0, 0, buttonWidth, buttonHeight);

@@ -94,4 +94,4 @@
 
 #define EN_ESPANOL_STRING NSLocalizedString(@"En Español", @"in spanish")
 #define LANGUAGE_HELP_STRING NSLocalizedString(@"Puede cambiar el idioma del dispositivo para ver esta solicitud en español.", @"language help text")
-#define SHOW_HELP_STRING NSLocalizedString(@"Mostrar la Ayuda", @"show help")
+#define SHOW_HELP_STRING NSLocalizedString(@"Mostrar Ayuda", @"show help")
