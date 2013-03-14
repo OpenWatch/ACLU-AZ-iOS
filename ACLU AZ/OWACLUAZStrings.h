@@ -65,7 +65,7 @@
 #define ABOUT_STRING NSLocalizedString(@"About", @"Title for about page")
 #define INTERNET_CONNECTION_WARNING_STRING NSLocalizedString(@"Please check your internet connection and try again.", @"warning when a request fails")
 #define SUCCESS_STRING NSLocalizedString(@"Success", @"It's going great!")
-#define SUCCESS_MSG_STRING NSLocalizedString(@"Report was successfully submitted. Thank you!", @"Report success message")
+#define SUCCESS_MSG_STRING NSLocalizedString(@"Thanks for sharing your story. We'll keep the specific details of your story confidential unless we contact you and get your permission to share it.", @"Report success message")
 #define POWERED_BY_STRING NSLocalizedString(@"Powered by:", @"label for openwatch")
 
 #define GENERAL_STRING NSLocalizedString(@"General", @"General section")
@@ -88,3 +88,6 @@
 #define JAIL_TITLE_STRING NSLocalizedString(@"In Jail", @"title for in jail")
 #define JAIL_TEXTVIEW_STRING NSLocalizedString(@"If you are arrested and taken to jail you may be asked questions about where you were born, how you entered the U.S. or how long you've been here. You do not have to answer these questions. This information can be used to detain and deport you.", @"jail info text")
 #define CALL_ACLU_STRING NSLocalizedString(@"Call the ACLU of Arizona?", @"call aclu string")
+
+#define DISCLAIMER_STRING NSLocalizedString(@"This form does not give legal advice, and you should not rely on it as legal advice. This form is not an offer by the ACLU to represent you. You should not rely on the information you get from this site and should speak with a lawyer to get advice on your specific situation. We also cannot promise that the information on this site is complete, accurate, or up-to-date. For children under 13, this survey must be completed by your parent or guardian.", @"ACLU disclaimer")
+#define NOTE_STRING NSLocalizedString(@"Note", @"disclaimer title")

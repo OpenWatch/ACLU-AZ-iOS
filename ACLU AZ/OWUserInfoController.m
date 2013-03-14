@@ -53,7 +53,8 @@
 - (BOOL) isValid {
     NSString *firstName = [data objectForKey:FIRST_NAME_KEY];
     NSString *lastName = [data objectForKey:LAST_NAME_KEY];
-    return (firstName.length > 0 && lastName.length > 0);
+    NSString *zipCode = [data objectForKey:ZIP_KEY];
+    return (firstName.length > 0 && lastName.length > 0 && zipCode.length > 0);
 }
 
 - (void) saveDataToPath:(NSString*)path {

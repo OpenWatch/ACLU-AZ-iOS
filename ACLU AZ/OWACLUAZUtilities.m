@@ -82,6 +82,7 @@
     view.layer.shadowOffset = CGSizeMake(0, 1);
     view.layer.shadowOpacity = 1;
     view.layer.shadowRadius = 3.0;
+    //view.layer.shouldRasterize = YES;
     view.clipsToBounds = NO;
 }
 

@@ -68,6 +68,8 @@
         [self.root bindToObject:userInfoController.data];
         [self refreshValues];
     }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NOTE_STRING message:DISCLAIMER_STRING delegate:nil cancelButtonTitle:OK_STRING otherButtonTitles:nil];
+    [alert show];
 }
 
 - (void) refreshValues {
@@ -105,7 +107,7 @@
     QEntryElement *stateElement = [[QEntryElement alloc] initWithTitle:STATE_STRING Value:nil];
     stateElement.key = STATE_KEY;
     [OWACLUAZUtilities setBindValueForElement:stateElement];
-    QEntryElement *zipElement = [[QEntryElement alloc] initWithTitle:ZIP_CODE_STRING Value:nil];
+    QEntryElement *zipElement = [[QEntryElement alloc] initWithTitle:ZIP_CODE_STRING Value:nil Placeholder:REQUIRED_STRING];
     zipElement.key = ZIP_KEY;
     [OWACLUAZUtilities setBindValueForElement:zipElement];
     zipElement.keyboardType = UIKeyboardTypeNumberPad;

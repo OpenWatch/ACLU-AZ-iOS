@@ -137,7 +137,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D903ADB1168CD3F2003D8A23 /* Stop SB1070.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stop SB1070.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D903ADB1168CD3F2003D8A23 /* Stop 1070.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stop 1070.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D903ADB5168CD3F2003D8A23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D903ADB7168CD3F2003D8A23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D903ADB9168CD3F2003D8A23 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -367,7 +367,7 @@
 		D903ADB2168CD3F2003D8A23 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D903ADB1168CD3F2003D8A23 /* Stop SB1070.app */,
+				D903ADB1168CD3F2003D8A23 /* Stop 1070.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -725,9 +725,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D903ADB0168CD3F2003D8A23 /* Stop SB1070 */ = {
+		D903ADB0168CD3F2003D8A23 /* Stop 1070 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D903ADCF168CD3F2003D8A23 /* Build configuration list for PBXNativeTarget "Stop SB1070" */;
+			buildConfigurationList = D903ADCF168CD3F2003D8A23 /* Build configuration list for PBXNativeTarget "Stop 1070" */;
 			buildPhases = (
 				D903ADAD168CD3F2003D8A23 /* Sources */,
 				D903ADAE168CD3F2003D8A23 /* Frameworks */,
@@ -738,9 +738,9 @@
 			dependencies = (
 				D9AF4C50169B964400469DB7 /* PBXTargetDependency */,
 			);
-			name = "Stop SB1070";
+			name = "Stop 1070";
 			productName = "ACLU AZ";
-			productReference = D903ADB1168CD3F2003D8A23 /* Stop SB1070.app */;
+			productReference = D903ADB1168CD3F2003D8A23 /* Stop 1070.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -772,7 +772,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				D903ADB0168CD3F2003D8A23 /* Stop SB1070 */,
+				D903ADB0168CD3F2003D8A23 /* Stop 1070 */,
 			);
 		};
 /* End PBXProject section */
@@ -1045,7 +1045,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D903ADCF168CD3F2003D8A23 /* Build configuration list for PBXNativeTarget "Stop SB1070" */ = {
+		D903ADCF168CD3F2003D8A23 /* Build configuration list for PBXNativeTarget "Stop 1070" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D903ADD0168CD3F2003D8A23 /* Debug */,
