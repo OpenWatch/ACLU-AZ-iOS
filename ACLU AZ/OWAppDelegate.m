@@ -29,9 +29,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-#ifdef TESTING
-    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
-#endif
+//#ifdef TESTING
+    //[TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+//#endif
     [TestFlight takeOff:TESTFLIGHT_APP_TOKEN];
     [MagicalRecord setupCoreDataStack];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
