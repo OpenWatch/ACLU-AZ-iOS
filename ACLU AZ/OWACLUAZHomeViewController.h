@@ -22,7 +22,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OWACLUAZHomeViewController : UIViewController
+@interface OWACLUAZHomeViewController : UIViewController <UIAlertViewDelegate>
 
 @property (nonatomic, strong) UIButton *reportButton;
 @property (nonatomic, strong) UIButton *rightsButton;
@@ -30,5 +30,6 @@
 @property (nonatomic, strong) UIBarButtonItem *aboutButton;
 @property (nonatomic, strong) UIImageView *bannerImageView;
 @property (nonatomic, strong) UIView *buttonView;
+@property (nonatomic, strong) UIButton *languageButton;
 
 @end

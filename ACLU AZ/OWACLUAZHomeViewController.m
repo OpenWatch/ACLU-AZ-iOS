@@ -36,7 +36,7 @@
 @end
 
 @implementation OWACLUAZHomeViewController
-@synthesize reportButton, bannerImageView, settingsButton, rightsButton, buttonView, aboutButton;
+@synthesize reportButton, bannerImageView, settingsButton, rightsButton, buttonView, aboutButton, languageButton;
 
 - (id)init
 {
@@ -57,6 +57,12 @@
     return self;
 }
 
+- (void) languageButtonPressed:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:EN_ESPANOL_STRING message:LANGUAGE_HELP_STRING delegate:self cancelButtonTitle:CANCEL_STRING otherButtonTitles:SHOW_HELP_STRING, nil];
+    alert.delegate = self;
+    [alert show];
+}
+
 - (void) setupBannerImage {
     self.bannerImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"aclu-logo.jpg"]];
     self.bannerImageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -70,14 +76,21 @@
     CGFloat buttonHeight = 60.0f;
     CGFloat padding = 10.0f;
 
-    [self.reportButton setTitle:REPORT_STRING forState:UIControlStateNormal];
-    [self.rightsButton setTitle:KNOW_YOUR_RIGHTS_STRING forState:UIControlStateNormal];
-    
+
+    self.languageButton = [UIButton buttonWithType:UIButtonTypeCustom];
+
     self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, buttonWidth, buttonHeight*2 + padding*2)];
     self.reportButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.rightsButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.reportButton addTarget:self action:@selector(reportButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.rightsButton addTarget:self action:@selector(rightsButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.languageButton addTarget:self action:@selector(languageButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.reportButton setTitle:REPORT_STRING forState:UIControlStateNormal];
+    [self.rightsButton setTitle:KNOW_YOUR_RIGHTS_STRING forState:UIControlStateNormal];
+    [self.languageButton setTitle:EN_ESPANOL_STRING forState:UIControlStateNormal];
+    [self.languageButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
     
     self.reportButton.frame = CGRectMake(0, 0, buttonWidth, buttonHeight);
     self.rightsButton.frame = CGRectMake(0, [OWACLUAZUtilities bottomOfView:reportButton]+padding*2, buttonWidth, buttonHeight);
@@ -114,6 +127,8 @@
     
     [self styleTextForButton:reportButton];
     [self styleTextForButton:rightsButton];
+    
+    [self.view addSubview:languageButton];
 }
 
 - (void) styleTextForButton:(UIButton*)button {
@@ -143,6 +158,10 @@
     CGFloat buttonViewYOrigin = floorf([OWACLUAZUtilities bottomOfView:bannerImageView] + ((height - [OWACLUAZUtilities bottomOfView:bannerImageView]) / 2) - (buttonView.frame.size.height/2));
     self.buttonView.frame = CGRectMake(buttonViewXOrigin, buttonViewYOrigin, buttonView.frame.size.width, buttonView.frame.size.height);
     
+    CGFloat languageWidth = 180.0f;
+    CGFloat languageHeight = 40.0f;
+    self.languageButton.frame = CGRectMake(self.view.frame.size.width/2 - languageWidth/2, self.view.frame.size.height - padding - languageHeight, languageWidth, languageHeight);
+    //self.languageButton.frame = CGRectMake(0, 0, languageWidth, languageHeight);
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
@@ -175,6 +194,13 @@
 - (void) aboutButtonPressed:(id)sender {
     OWAboutViewController *aboutViewVC = [[OWAboutViewController alloc] init];
     [self.navigationController pushViewController:aboutViewVC animated:YES];
+}
+
+- (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (alertView.cancelButtonIndex != buttonIndex) {
+        NSURL *url = [NSURL URLWithString:@"http://support.apple.com/kb/HT2371?viewlocale=es_ES"];
+        [[UIApplication sharedApplication] openURL:url];
+    }
 }
 
 @end

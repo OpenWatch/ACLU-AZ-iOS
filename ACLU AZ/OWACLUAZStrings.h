@@ -91,3 +91,7 @@
 
 #define DISCLAIMER_STRING NSLocalizedString(@"This form does not give legal advice, and you should not rely on it as legal advice. This form is not an offer by the ACLU to represent you. You should not rely on the information you get from this site and should speak with a lawyer to get advice on your specific situation. We also cannot promise that the information on this site is complete, accurate, or up-to-date. For children under 13, this survey must be completed by your parent or guardian.", @"ACLU disclaimer")
 #define NOTE_STRING NSLocalizedString(@"Note", @"disclaimer title")
+
+#define EN_ESPANOL_STRING NSLocalizedString(@"En Español", @"in spanish")
+#define LANGUAGE_HELP_STRING NSLocalizedString(@"Puede cambiar el idioma del dispositivo para ver esta solicitud en español.", @"language help text")
+#define SHOW_HELP_STRING NSLocalizedString(@"Mostrar la Ayuda", @"show help")
