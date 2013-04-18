@@ -137,7 +137,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D903ADB1168CD3F2003D8A23 /* Stop 1070.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stop 1070.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D903ADB1168CD3F2003D8A23 /* Stop SB1070.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stop SB1070.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D903ADB5168CD3F2003D8A23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D903ADB7168CD3F2003D8A23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D903ADB9168CD3F2003D8A23 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -367,7 +367,7 @@
 		D903ADB2168CD3F2003D8A23 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D903ADB1168CD3F2003D8A23 /* Stop 1070.app */,
+				D903ADB1168CD3F2003D8A23 /* Stop SB1070.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -740,7 +740,7 @@
 			);
 			name = "Stop 1070";
 			productName = "ACLU AZ";
-			productReference = D903ADB1168CD3F2003D8A23 /* Stop 1070.app */;
+			productReference = D903ADB1168CD3F2003D8A23 /* Stop SB1070.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1001,7 +1001,7 @@
 					"\"$(SRCROOT)/Submodules/TestFlight\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Stop SB1070";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Submodules\"/**";
@@ -1024,9 +1024,9 @@
 					"\"$(SRCROOT)/Submodules/TestFlight\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "613EF7A3-4C9C-4A7A-AC4E-22A8E2F35405";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "613EF7A3-4C9C-4A7A-AC4E-22A8E2F35405";
+				PRODUCT_NAME = "Stop SB1070";
+				PROVISIONING_PROFILE = "31C7302B-8525-4DC3-9FA0-91DBD9BB777B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "31C7302B-8525-4DC3-9FA0-91DBD9BB777B";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Submodules\"/**";
 				WRAPPER_EXTENSION = app;
