@@ -121,7 +121,7 @@
 }
 
 - (void) openwatchButtonPressed:(id)sender {
-    NSURL *openwatchURL = [NSURL URLWithString:@"http://www.openwatch.net"];
+    NSURL *openwatchURL = [NSURL URLWithString:@"https://openwatch.net"];
     [[UIApplication sharedApplication] openURL:openwatchURL];
 }
 
